@@ -1,22 +1,30 @@
 import React, { Fragment } from "react";
 import Head from "next/head";
-import "../static/sass/index.scss";
+import { Layout, Header } from "../src/components/shared/index";
+import { LeftSide, RightSide } from "../src/components/home/index";
+import styled from "styled-components";
+
+const StyledHome = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: calc(100% - 30%);
+
+  @media (max-width: 450px) {
+    flex-wrap: wrap;
+  }
+`;
 
 export default () => (
   <Fragment>
     <Head>
       <title>Casprine Assempah</title>
     </Head>
-    <div className="flex container">
-      <p>
-        Happy Hacking with Backpack{" "}
-        <span role="img" aria-label="fire">
-          🧳
-        </span>
-        <span role="img" aria-label="fire">
-          🔥
-        </span>
-      </p>
-    </div>
+    <Layout>
+      <Header />
+      <StyledHome>
+        <LeftSide />
+        <RightSide />
+      </StyledHome>
+    </Layout>
   </Fragment>
 );
