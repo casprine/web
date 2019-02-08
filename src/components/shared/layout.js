@@ -30,10 +30,8 @@ const StyledLayout = styled.div`
   height: 100%;
   .children {
     height: 100%;
-    /* padding: 0 70px; */
-    width: 85vw;
+    padding: 0 90px;
     margin: 0 auto;
-    outline: 1px solid red;
     background: rgba(0, 0, 0, 0)
       linear-gradient(rgba(0, 0, 32, 0), ${body} 320px) repeat scroll 0% 0%;
   }

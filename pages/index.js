@@ -7,17 +7,22 @@ import styled from "styled-components";
 const StyledHome = styled.div`
   display: flex;
   flex-direction: row;
-  height: calc(100% - 30%);
-
-  @media (max-width: 450px) {
+  @media (max-width: 750px) {
     flex-wrap: wrap;
+    outline: 1px solid red;
+    .left,
+    .right,
+    .wrapper {
+      width: 100%;
+      outline: 1px solid red;
+    }
   }
 `;
 
 export default () => (
   <Fragment>
     <Head>
-      <title>Casprine Assempah</title>
+      <title>Casprine Assempah - Frontend Developer , Designer</title>
     </Head>
     <Layout>
       <Header />

@@ -3,12 +3,31 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
 
   @font-face {
-    font-family: 'gte';
-    src:  url('../static/fonts/gte.ttf') format('ttf');
+    font-family: 'geo';
+    src:  url('../static/fonts/geomanist-book.ttf');
     font-weight: normal;
     font-style: normal;
     font-display: auto;
   }
+
+  @font-face {
+    font-family: 'gte';
+    src:  url('../static/fonts/gte.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: auto;
+  }
+
+
+  @font-face {
+    font-family: 'expo2';
+    src:  url('../static/fonts/expo2.woff') format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: auto;
+  }
+
+
 
 
 
@@ -23,7 +42,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family:"expo",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    font-family:"geo",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     scroll-behavior: smooth;
   }
@@ -38,26 +57,22 @@ const GlobalStyles = createGlobalStyle`
   height: inherit;
 }
 
-  .flex {
-    display: flex;
-    flex-wrap: wrap;
+
+hr{
+  display: table-cell;
+  width: 1px;
+  height: 100%;
+  border: 0;
+}
+
+a{
+  cursor:pointer;
+}
+
+.wrapper {
+    width: 80%;
   }
 
-  .flex-wrap {
-    display: flex;
-  }
-  .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  ul {
-    li {
-      list-style: none;
-    }
-  }
 
 .grid-base,
 .grid-3 {
