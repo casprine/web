@@ -37,7 +37,7 @@ const Header = () => (
 );
 
 const StyledHeader = styled.div`
-  padding: 50px 0;
+  padding: 50px 0 80px 0;
   font-family: "geo";
   color: ${white};
   display: flex;
@@ -48,20 +48,8 @@ const StyledHeader = styled.div`
 
     span {
       padding: 0 8px;
-
-      &:hover {
-        ::before {
-          content: "Casprine";
-          position: absolute;
-          bottom: 2px;
-          left: 0px;
-          background-color: #feef6d;
-          height: 4px;
-          width: 20%;
-          z-index: -1;
-          transition: width 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-      }
+      position: relative;
+      outline: 1px solid red;
     }
   }
 `;

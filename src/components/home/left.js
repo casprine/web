@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { white, grey } from "../shared/theme";
 import { ContextConsumer } from "../../context/index";
-import { stack } from "../../data/stack";
+import { stack, socail } from "../../data/stack";
 const LeftSide = () => {
   return (
     <Fragment>
@@ -27,6 +27,14 @@ const LeftSide = () => {
                     <li key={i}>{s.name}</li>
                   ))}
                 </div>
+
+                <div className="social">
+                  {socail.map((s, i) => (
+                    <a href={s.link} key={i} class>
+                      @{s.title}
+                    </a>
+                  ))}
+                </div>
               </div>
             </StyledLeftSide>
           </ThemeProvider>
@@ -39,6 +47,7 @@ const LeftSide = () => {
 const StyledLeftSide = styled.div`
   color: ${white};
   width: 50%;
+
   div {
     margin: 40px 0;
   }
@@ -63,6 +72,25 @@ const StyledLeftSide = styled.div`
       color: ${white};
       :first-child {
         padding-left: 5px;
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      padding: 10px 0;
+      color: ${grey};
+      text-transform: capitalize;
+      transition-property: margin-left, opacity;
+      transition-duration: 0.6s;
+      transition-timing-function: cubic-bezier(0.8, 0.03, 0.25, 1);
+      cursor: pointer;
+      :hover {
+        margin-left: 10px;
+        opacity: 0.5;
       }
     }
   }

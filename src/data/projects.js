@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: "1",
-    link: "https://github.com/Casprine/mig",
+    github: "https://github.com/Casprine/mig",
     stacks: ["react", "next.js", "netlify ", "scss "],
     name: "Mig",
     about: "A curated list of awesome tools and projects created by Ghanaians"

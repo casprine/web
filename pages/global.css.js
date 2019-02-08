@@ -65,14 +65,48 @@ hr{
   border: 0;
 }
 
-a{
-  cursor:pointer;
+
+
+
+
+a {
+    position: relative;
+    text-decoration:none;
+  color:inherit;
+
+  }
+
+
+
+
+/* link */
+
+.link {
+	display: inline-block;
+	position: relative;
+	transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
 }
+
+.link:after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	box-shadow: 0 1px rgba(255,255,255,0.6);
+	background: black;
+	transition: background 0.5s cubic-bezier(.55, 0, .1, 1);
+}
+
+.link:hover {
+	background:hsl(36, 77%, 49%) ;
+}
+
+
+
 
 .wrapper {
     width: 80%;
   }
-
 
 .grid-base,
 .grid-3 {
@@ -140,6 +174,14 @@ a{
 }
 
 
+@keyframes link {
+	from {
+		transform: scaleX(0);
+	}
+	to {
+		transform: scaleX(1);
+	}
+}
 `;
 
 export default GlobalStyles;

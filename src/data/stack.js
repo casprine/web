@@ -8,3 +8,18 @@ export const stack = [
   { id: 7, name: "figma," },
   { id: 8, name: "Uxpin" }
 ];
+
+export const socail = [
+  {
+    title: "twitter",
+    link: "https://twitter.com/casprine_ix"
+  },
+  {
+    title: "github",
+    link: "https://github.com/casprine"
+  },
+  {
+    title: "dribbble",
+    link: "https://dribbble.com/casprine/"
+  }
+];

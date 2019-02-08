@@ -3,10 +3,12 @@ import styled, { ThemeProvider } from "styled-components";
 import { white, grey } from "../shared/theme";
 import { ContextConsumer } from "../../context/index";
 import { projects } from "../../data/projects";
+import { blogPosts } from "../../data/blogs";
 import Link from "next/link";
 
 const RightSide = () => {
   const projs = projects.slice(0, 3);
+  const blogs = blogPosts.slice(0, 4);
   return (
     <Fragment>
       <ContextConsumer>
@@ -19,17 +21,22 @@ const RightSide = () => {
                     <StyledHeading>@Projects</StyledHeading>
                   </Link>
                   {projs.map((proj, i) => (
-                    <div className="project">
-                      <li>{proj.about}</li>
-                      <a href={proj.github}>
-                        <li key={i}>@{proj.name}</li>
+                    <StyledProject>
+                      <span className="about">{proj.about}</span>
+                      <a href={proj.github} className="link">
+                        <span key={i}>@{proj.name}</span>
                       </a>
-                    </div>
+                    </StyledProject>
                   ))}
                 </div>
 
                 <div className="blog">
                   <StyledHeading>@Writings</StyledHeading>
+                  <div className="posts">
+                    {blogs.map((b, i) => (
+                      <StyledBlogPost key={i}> {b.title} </StyledBlogPost>
+                    ))}
+                  </div>
                 </div>
               </div>
             </StyledRightSide>
@@ -52,34 +59,51 @@ const StyledRightSide = styled.div`
   div {
     margin: 40px 0;
   }
-
-  .projects {
-    .project {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      margin: 20px 0;
-      li {
-        list-style: none;
-        padding: 0 5px;
-        :last-child {
-          width: 60px;
-          text-align: right;
-        }
-        :first-child {
-          font-size: 14px;
-          color: ${grey};
-          text-transform: lowercase;
-        }
-      }
-    }
-  }
 `;
 
 const StyledHeading = styled.div`
   font-family: "expo2";
   color: ${white};
   font-size: 20px;
+  cursor: pointer;
+`;
+
+const StyledProject = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px 0 !important;
+  font-size: 14px;
+
+  span {
+    list-style: none;
+    padding: 0 5px;
+  }
+
+  a {
+    width: 50px;
+    text-align: right;
+    text-transform: lowercase;
+    text-align: left;
+  }
+  .about {
+    /* margin-left: 10px; */
+    color: ${grey};
+    text-transform: lowercase;
+  }
+`;
+
+const StyledBlogPost = styled.article`
+  margin: 15px 0;
+  color: ${grey};
+  transition-property: margin-right, opacity;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.8, 0.03, 0.25, 1);
+  cursor: pointer;
+  :hover {
+    margin-right: 10px;
+    opacity: 0.5;
+  }
 `;
 
 export default RightSide;
