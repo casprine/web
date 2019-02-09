@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { white, grey } from "../shared/theme";
+import { white } from "../shared/theme";
 import { ContextConsumer } from "../../context/index";
 import Link from "next/link";
 import ThemeChanger from "./themeChanger";
@@ -11,10 +11,12 @@ const Header = () => (
         <Fragment>
           <ThemeProvider theme={{ mode: theme }}>
             <StyledHeader>
-              <div className="logo">C</div>
+              <Link href="/">
+                <div className="logo">C</div>
+              </Link>
 
               <div className="links">
-                <Link href="/projects">
+                <Link href="/work">
                   <span>Works</span>
                 </Link>
                 <Link href="/design">
@@ -41,6 +43,10 @@ const StyledHeader = styled.div`
   font-family: "geo";
   color: ${white};
   display: flex;
+
+  .logo {
+    cursor: pointer;
+  }
 
   .links {
     margin: 0 auto;

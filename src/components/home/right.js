@@ -81,13 +81,12 @@ const StyledProject = styled.div`
   }
 
   a {
-    width: 50px;
+    width: 75px;
     text-align: right;
     text-transform: lowercase;
-    text-align: left;
+    text-align: right;
   }
   .about {
-    /* margin-left: 10px; */
     color: ${grey};
     text-transform: lowercase;
   }

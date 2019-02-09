@@ -7,10 +7,7 @@ import styled from "styled-components";
 const StyledHome = styled.div`
   display: flex;
   flex-direction: row;
-  /* outline: 1px solid red; */
-  
   .wrapper {
-    /* outline: 1px solid red; */
     margin: 0 auto;
   }
 
@@ -26,7 +23,7 @@ const StyledHome = styled.div`
   }
 `;
 
-export default () => (
+const Index = () => (
   <Fragment>
     <Head>
       <title>Casprine Assempah - Frontend Developer , Designer</title>
@@ -40,3 +37,5 @@ export default () => (
     </Layout>
   </Fragment>
 );
+
+export default Index;
