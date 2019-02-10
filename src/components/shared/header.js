@@ -45,6 +45,9 @@ const StyledHeader = styled.div`
   color: ${white};
   display: flex;
 
+  @media (max-width: 750px) {
+    padding-bottom: 30px;
+  }
   .logo {
     cursor: pointer;
   }

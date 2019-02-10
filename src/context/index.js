@@ -16,8 +16,6 @@ class ContextProvider extends Component {
 
   render() {
     const { dark } = this.state;
-    console.log(dark);
-
     return (
       <Fragment>
         <ContextContext.Provider

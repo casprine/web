@@ -5,7 +5,11 @@ import { Layout, Header, SectionHeader } from "../src/components/shared/index";
 import ProjectCard from "../src/components/work/projectCard";
 import { projects } from "../src/data/projects";
 
-const StyledWorkWrapper = styled.div``;
+const StyledWorkWrapper = styled.div`
+  @media (max-width: 450px) {
+    padding-bottom: 40px;
+  }
+`;
 
 const Work = () => (
   <Fragment>

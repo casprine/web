@@ -48,6 +48,10 @@ const StyledLeftSide = styled.div`
   color: ${white};
   width: 50%;
 
+  @media (max-width: 750px) {
+    width: 100%;
+  }
+
   div {
     margin: 40px 0;
   }
@@ -80,6 +84,10 @@ const StyledLeftSide = styled.div`
     display: flex;
     flex-direction: column;
 
+    @media (max-width: 750px) {
+      flex-direction: row;
+    }
+
     a {
       padding: 5px 0;
       color: ${grey};
@@ -88,6 +96,10 @@ const StyledLeftSide = styled.div`
       transition-duration: 0.6s;
       transition-timing-function: cubic-bezier(0.8, 0.03, 0.25, 1);
       cursor: pointer;
+
+      @media (max-width: 750px) {
+        padding: 0 5px;
+      }
       :hover {
         margin-left: 10px;
         opacity: 0.5;

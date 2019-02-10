@@ -33,13 +33,6 @@ const GlobalStyles = createGlobalStyle`
     font-family:"geo",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     scroll-behavior: smooth;
-    background: ${body};
-
-    
-  }
-
-  html , body {
-    height: 100vh;
     margin:0;
     padding:0;
   }

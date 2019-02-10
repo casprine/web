@@ -13,12 +13,9 @@ const StyledHome = styled.div`
   }
   @media (max-width: 750px) {
     flex-wrap: wrap;
-    outline: 1px solid red;
-    .left,
-    .right,
+
     .wrapper {
       width: 100%;
-      outline: 1px solid red;
     }
   }
 `;

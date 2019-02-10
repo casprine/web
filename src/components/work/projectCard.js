@@ -30,7 +30,6 @@ const StyledProject = styled.div`
   justify-content: space-evenly;
   flex-direction: column;
   cursor: pointer;
-  /* min-height: 100px; */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07), 0 15px 35px rgba(50, 50, 93, 0.1);
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
   :hover {

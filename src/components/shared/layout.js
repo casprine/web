@@ -4,6 +4,17 @@ import Head from "next/head";
 import { ContextConsumer } from "../../context/index";
 import { body } from "./theme";
 
+const layoutStyles = {
+  wrapper: {
+    width: "85vw",
+    minHeight: "100vh",
+    marginRight: "auto",
+    marginLeft: "auto",
+    display: "flex",
+    flexDirection: "column"
+  }
+};
+
 const Layout = ({ children }) => (
   <Fragment>
     <Head>
@@ -14,7 +25,11 @@ const Layout = ({ children }) => (
       {({ theme }) => (
         <ThemeProvider theme={{ mode: theme }}>
           <StyledLayout>
-            <div className="children">{children}</div>
+            <div>
+              <div style={layoutStyles.wrapper} className="children">
+                {children}
+              </div>
+            </div>
           </StyledLayout>
         </ThemeProvider>
       )}
@@ -29,11 +44,13 @@ const StyledLayout = styled.div`
   background-position: top;
   height: 100%;
   .children {
-    height: 100%;
-    padding: 0 90px;
-    margin: 0 auto;
     background: rgba(0, 0, 0, 0)
       linear-gradient(rgba(0, 0, 32, 0), ${body} 320px) repeat scroll 0% 0%;
+
+    @media (max-width: 750px) {
+      /* outline: 1px solid red; */
+      background: none;
+    }
   }
 `;
 
