@@ -2,7 +2,8 @@ import React, { Fragment } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { white } from "../shared/theme";
 import { ContextConsumer } from "../../context/index";
-import { ActiveLink } from "./link";
+// import { ActiveLink } from "./link";
+import Link from "next/link";
 import ThemeChanger from "./themeChanger";
 const Header = () => (
   <Fragment>
@@ -11,14 +12,14 @@ const Header = () => (
         <Fragment>
           <ThemeProvider theme={{ mode: theme }}>
             <StyledHeader>
-              <ActiveLink href="/">
+              <Link href="/">
                 <div className="logo">C</div>
-              </ActiveLink>
+              </Link>
 
               <div className="links">
-                <ActiveLink href="/work">
+                <Link href="/work">
                   <span>Works</span>
-                </ActiveLink>
+                </Link>
                 {/* <Link href="/design">
                   <span>Design</span>
                 </Link> */}

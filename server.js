@@ -14,6 +14,10 @@ app
       return handle(req, res);
     });
 
+    server.get("/work", (req, res) => {
+      return handle(req, res);
+    });
+
     server.listen(3000, err => {
       if (err) throw err;
       console.log("> Ready on http://localhost:3000");
