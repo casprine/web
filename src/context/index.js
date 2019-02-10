@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from "react";
-// import { day } from "../utils/helpers";
+import { day } from "../utils/helpers";
 
 const ContextContext = React.createContext();
 
 class ContextProvider extends Component {
   state = {
-    dark: false
+    dark: !day()
   };
 
   switchTheme = () => {

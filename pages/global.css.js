@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { body } from "../src/components/shared/theme";
 
 const GlobalStyles = createGlobalStyle`
 
@@ -32,6 +33,9 @@ const GlobalStyles = createGlobalStyle`
     font-family:"geo",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     scroll-behavior: smooth;
+    background: ${body};
+
+    
   }
 
   html , body {

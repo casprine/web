@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import { white, border } from "../shared/theme";
+import { white, border, darkBorder } from "../shared/theme";
 
 const ProjectCard = ({ name, stacks, about, github }) => {
   return (
@@ -31,22 +31,26 @@ const StyledProject = styled.div`
   flex-direction: column;
   cursor: pointer;
   min-height: 100px;
-  box-shadow: rgba(38, 41, 58, 0.06) 0px 1px 3px 0px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07), 0 15px 35px rgba(50, 50, 93, 0.1);
-
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
   :hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07),
       0 15px 35px rgba(50, 50, 93, 0.1);
+    transform: translateY(-10px);
+    border-top: 5px solid ${darkBorder};
   }
+
+  div {
+    padding: 0.5rem 0;
+  }
+
   .name {
     letter-spacing: -0.03em;
     line-height: 1.1;
-    outline: 1px solid red;
     word-wrap: break-word;
     font-family: "geo";
     font-size: 1.5rem;
     color: hsl(209, 61%, 16%);
-    outline: 1px solid red;
   }
 
   .description {
@@ -63,14 +67,13 @@ const StyledProject = styled.div`
     margin-top: auto;
     font-size: 17px;
     text-transform: lowercase;
-    outline: 1px solid red;
     display: flex;
     flex-wrap: wrap;
     span {
       display: block;
       margin: 0 5px;
       color: hsl(209, 34%, 30%);
-      font-family: "geo";
+      font-family: "expo2";
       &:first-child {
         margin-left: 0;
       }

@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { white } from "../shared/theme";
 import { ContextConsumer } from "../../context/index";
-import Link from "next/link";
+import { ActiveLink } from "./link";
 import ThemeChanger from "./themeChanger";
 const Header = () => (
   <Fragment>
@@ -11,20 +11,20 @@ const Header = () => (
         <Fragment>
           <ThemeProvider theme={{ mode: theme }}>
             <StyledHeader>
-              <Link href="/">
+              <ActiveLink href="/">
                 <div className="logo">C</div>
-              </Link>
+              </ActiveLink>
 
               <div className="links">
-                <Link href="/work">
+                <ActiveLink href="/work">
                   <span>Works</span>
-                </Link>
-                <Link href="/design">
+                </ActiveLink>
+                {/* <Link href="/design">
                   <span>Design</span>
-                </Link>
-                <Link href="/writings">
+                </Link> */}
+                <a href="https://casprine-blog.now.sh/" target="_blank">
                   <span>Writings</span>
-                </Link>
+                </a>
               </div>
 
               <div className="toggler">
@@ -55,7 +55,10 @@ const StyledHeader = styled.div`
     span {
       padding: 0 8px;
       position: relative;
-      outline: 1px solid red;
+
+      :hover {
+        text-decoration: line-through ${white};
+      }
     }
   }
 `;

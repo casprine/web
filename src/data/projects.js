@@ -13,7 +13,8 @@ export const projects = [
     github: "https://github.com/gwuah/dropout",
     stacks: ["react ", "figma", "css", "node "],
     name: "Dropout",
-    about: "A realtime code collaboration project 👨🏿‍💻👘"
+    about:
+      "Get customer feedback, in realtime, with absolutely zero hassle. [WIP]👨🏿‍💻👘"
   },
   {
     id: "3",
@@ -25,9 +26,10 @@ export const projects = [
   {
     id: "4",
     github: "https://github.com/Casprine",
-    stacks: ["html", "css", "gulp "],
-    name: "Lunch",
-    about: "A website for a local food delivery system, [WIP] 🚛🍜"
+    stacks: ["react", "mobx", "firebase", "sketchapp"],
+    name: "Titan",
+    about:
+      "Open-source Invoice maker made for creatives with tones of templates to choose from [WIP] ✨🤺"
   },
   {
     id: "5",

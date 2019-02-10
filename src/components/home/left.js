@@ -83,7 +83,7 @@ const StyledLeftSide = styled.div`
     a {
       padding: 5px 0;
       color: ${grey};
-      text-transform: capitalize;
+      text-transform: lowercase;
       transition-property: margin-left, opacity;
       transition-duration: 0.6s;
       transition-timing-function: cubic-bezier(0.8, 0.03, 0.25, 1);

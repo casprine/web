@@ -5,13 +5,7 @@ import { Layout, Header, SectionHeader } from "../src/components/shared/index";
 import ProjectCard from "../src/components/work/projectCard";
 import { projects } from "../src/data/projects";
 
-const StyledWorkWrapper = styled.div`
-  outline: 1px solid red;
-
-  * {
-    /* outline: 1px solid red; */
-  }
-`;
+const StyledWorkWrapper = styled.div``;
 
 const Work = () => (
   <Fragment>

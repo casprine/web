@@ -84,7 +84,6 @@ const StyledProject = styled.div`
   a {
     width: 75px;
     text-transform: lowercase;
-    outline: 1px solid red;
     text-align: right;
   }
   .about {
@@ -107,8 +106,6 @@ const StyledBlogPost = styled.article`
 `;
 
 const StyledLink = styled.a`
-  outline: 1px solid red;
-
   span {
     display: inline-block;
     position: relative;
