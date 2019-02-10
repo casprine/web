@@ -81,7 +81,7 @@ const StyledLeftSide = styled.div`
     flex-direction: column;
 
     a {
-      padding: 10px 0;
+      padding: 5px 0;
       color: ${grey};
       text-transform: capitalize;
       transition-property: margin-left, opacity;

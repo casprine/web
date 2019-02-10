@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Head from "next/head";
 import styled from "styled-components";
-import { Layout, Header } from "../src/components/shared/index";
+import { Layout, Header, SectionHeader } from "../src/components/shared/index";
 import ProjectCard from "../src/components/work/projectCard";
 import { projects } from "../src/data/projects";
 
@@ -21,6 +21,7 @@ const Work = () => (
 
     <Layout>
       <Header />
+      <SectionHeader />
       <StyledWorkWrapper className="grid-3">
         {projects.map((project, i) => (
           <ProjectCard key={i} {...project} />

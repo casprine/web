@@ -1,15 +1,13 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import { black, white, grey } from "../shared/theme";
+import { white, border } from "../shared/theme";
 
-const ProjectCard = ({ name, stacks, logoUrl: img, about, link }) => {
+const ProjectCard = ({ name, stacks, about, github }) => {
   return (
     <Fragment>
-      <a href={link} target="_blank" rel="noopener noreferrer">
+      <a href={github} target="_blank" rel="noopener noreferrer">
         <StyledProject className="project">
-          <div className="details">
-            <span className="name">{name}</span>
-          </div>
+          <div className="name">{name}</div>
           <div className="description">{about}</div>
           <div className="stacks ">
             {stacks.map((stack, i) => (
@@ -26,43 +24,29 @@ const ProjectCard = ({ name, stacks, logoUrl: img, about, link }) => {
 
 const StyledProject = styled.div`
   background: white;
-  border-top: 5px solid ${white};
-  padding: 1.5rem 1.5rem;
+  border-top: 5px solid ${border};
+  padding: 1.2rem 2rem;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 5px 15px,
-    rgba(50, 50, 93, 0.1) 0px 15px 35px;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  min-height: 100px;
+  box-shadow: rgba(38, 41, 58, 0.06) 0px 1px 3px 0px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07), 0 15px 35px rgba(50, 50, 93, 0.1);
 
-  &:hover {
-    transform: translate(0, -10px);
-    border-top: 5px solid hsl(36, 77%, 49%);
+  :hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07),
+      0 15px 35px rgba(50, 50, 93, 0.1);
   }
-
-  .details {
+  .name {
     letter-spacing: -0.03em;
     line-height: 1.1;
+    outline: 1px solid red;
     word-wrap: break-word;
+    font-family: "geo";
     font-size: 1.5rem;
-    display: flex;
-    margin-bottom: 20px;
-
-    span {
-      display: block;
-      margin: auto 0;
-    }
-
-    .name {
-      margin-right: auto;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      word-wrap: break-word;
-      font-family: "expo2";
-      font-size: 1.5rem;
-      color: hsl(209, 61%, 16%);
-    }
+    color: hsl(209, 61%, 16%);
+    outline: 1px solid red;
   }
 
   .description {
@@ -70,10 +54,9 @@ const StyledProject = styled.div`
     letter-spacing: -0.02em;
     line-height: 1.4;
     font-size: 1rem;
-    color: #1d2323;
-    margin-bottom: 1rem;
+    color: hsl(209, 34%, 30%);
     text-rendering: auto;
-    font-family: "Book", $defaultFont;
+    font-family: "geo";
   }
 
   .stacks {
@@ -82,10 +65,11 @@ const StyledProject = styled.div`
     text-transform: lowercase;
     outline: 1px solid red;
     display: flex;
+    flex-wrap: wrap;
     span {
       display: block;
       margin: 0 5px;
-      color: ${grey};
+      color: hsl(209, 34%, 30%);
       font-family: "geo";
       &:first-child {
         margin-left: 0;

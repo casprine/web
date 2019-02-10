@@ -19,3 +19,8 @@ export const body = theme("mode", {
   false: "#E7EEF8",
   true: "rgb(27,27,30)"
 });
+
+export const border = theme("mode", {
+  false: " hsl(209, 61%, 16%)",
+  true: " hsl(36, 77%, 49%)"
+});

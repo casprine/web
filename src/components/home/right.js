@@ -23,9 +23,11 @@ const RightSide = () => {
                   {projs.map((proj, i) => (
                     <StyledProject>
                       <span className="about">{proj.about}</span>
-                      <a href={proj.github} className="link">
-                        <span key={i}>@{proj.name}</span>
-                      </a>
+                      <StyledLink href={proj.github}>
+                        <span key={i} className="link">
+                          @{proj.name}
+                        </span>
+                      </StyledLink>
                     </StyledProject>
                   ))}
                 </div>
@@ -77,13 +79,12 @@ const StyledProject = styled.div`
 
   span {
     list-style: none;
-    padding: 0 5px;
   }
 
   a {
     width: 75px;
-    text-align: right;
     text-transform: lowercase;
+    outline: 1px solid red;
     text-align: right;
   }
   .about {
@@ -102,6 +103,30 @@ const StyledBlogPost = styled.article`
   :hover {
     margin-right: 10px;
     opacity: 0.5;
+  }
+`;
+
+const StyledLink = styled.a`
+  outline: 1px solid red;
+
+  span {
+    display: inline-block;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+
+    :after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      box-shadow: 0 1px rgba(255, 255, 255, 0.6);
+      background: black;
+      transition: background 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+    }
+
+    :hover {
+      background: hsl(36, 77%, 49%);
+    }
   }
 `;
 

@@ -5,7 +5,7 @@ const ContextContext = React.createContext();
 
 class ContextProvider extends Component {
   state = {
-    dark: true
+    dark: false
   };
 
   switchTheme = () => {

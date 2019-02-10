@@ -7,8 +7,16 @@ import styled from "styled-components";
 const StyledHome = styled.div`
   display: flex;
   flex-direction: row;
+  outline:1px solid red;
+
   .wrapper {
     margin: 0 auto;
+  outline:1px solid red;
+
+  }
+
+  *{
+  /* outline:1px solid red; */
   }
 
   @media (max-width: 750px) {
