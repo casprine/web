@@ -142,14 +142,11 @@ const StyledBottomNav = styled.header`
     align-items: center;
     padding: 16px 30px;
 
-    /* * {
-      outline: 1px solid red;
-    } */
-
     .open {
       margin-left: auto;
       letter-spacing: 5px;
       font-size: 7px;
+      cursor: pointer;
     }
   }
 
@@ -159,6 +156,8 @@ const StyledBottomNav = styled.header`
 
   .nav {
     display: grid;
+
+    }
 
     nav {
       flex-direction: column;

@@ -17,15 +17,8 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>{this.props.styleTags}</Head>
-
-        {/* <ContextConsumer>
-          {({ footer }) => ( */}
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-        {/* )}
-        </ContextConsumer> */}
+        <Main />
+        <NextScript />
       </html>
     );
   }

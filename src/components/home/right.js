@@ -12,9 +12,9 @@ const RightSide = () => {
   return (
     <Fragment>
       <ContextConsumer>
-        {({ theme }) => (
+        {({ theme, footer }) => (
           <ThemeProvider theme={{ mode: theme }}>
-            <StyledRightSide>
+            <StyledRightSide footer={footer}>
               <div className="wrapper">
                 <div className="projects">
                   <Link href="/projects">
@@ -61,7 +61,7 @@ const StyledRightSide = styled.div`
 
   @media (max-width: 750px) {
     width: 100%;
-    padding-bottom: 15rem;
+    margin-bottom: ${props => (props.footer ? "15rem" : "4rem")};
   }
 
   .wrapper {
