@@ -41,6 +41,13 @@ const GlobalStyles = createGlobalStyle`
   height: inherit;
 }
 
+.center{
+  display:flex;
+
+  i{
+    display:block;
+  }
+}
 
 hr{
   display: table-cell;
@@ -112,6 +119,9 @@ a {
 		transform: scaleX(1);
 	}
 }
+
+
+
 `;
 
 export default GlobalStyles;

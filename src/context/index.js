@@ -5,7 +5,8 @@ const ContextContext = React.createContext();
 
 class ContextProvider extends Component {
   state = {
-    dark: !day()
+    dark: !day(),
+    footer: false
   };
 
   switchTheme = () => {
@@ -14,14 +15,22 @@ class ContextProvider extends Component {
       : this.setState({ dark: true });
   };
 
+  toggleFooter = () => {
+    this.state.footer
+      ? this.setState({ footer: false })
+      : this.setState({ footer: true });
+  };
+
   render() {
-    const { dark } = this.state;
+    const { dark, footer } = this.state;
     return (
       <Fragment>
         <ContextContext.Provider
           value={{
             theme: dark,
-            toggleTheme: this.switchTheme
+            footer: footer,
+            toggleTheme: this.switchTheme,
+            toggleFooter: this.toggleFooter
           }}
         >
           {this.props.children}

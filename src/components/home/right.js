@@ -20,24 +20,30 @@ const RightSide = () => {
                   <Link href="/projects">
                     <StyledHeading>@Projects</StyledHeading>
                   </Link>
-                  {projs.map((proj, i) => (
-                    <StyledProject>
-                      <span className="about">{proj.about}</span>
-                      <StyledLink href={proj.github}>
-                        <span key={i} className="link">
-                          @{proj.name}
-                        </span>
-                      </StyledLink>
-                    </StyledProject>
-                  ))}
+                  {projs.map((proj, i) => {
+                    console.log(i);
+                    return (
+                      <StyledProject>
+                        <span className="about">{proj.about}</span>
+                        <StyledLink href={proj.github}>
+                          <span key={i} className="link">
+                            @{proj.name}
+                          </span>
+                        </StyledLink>
+                      </StyledProject>
+                    );
+                  })}
                 </div>
 
                 <div className="blog">
                   <StyledHeading>@Writings</StyledHeading>
                   <div className="posts">
-                    {blogs.map((b, i) => (
-                      <StyledBlogPost key={i}> {b.title} </StyledBlogPost>
-                    ))}
+                    {blogs.map((b, i) => {
+                      console.log(i);
+                      return (
+                        <StyledBlogPost key={i}> {b.title} </StyledBlogPost>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -55,6 +61,7 @@ const StyledRightSide = styled.div`
 
   @media (max-width: 750px) {
     width: 100%;
+    padding-bottom: 15rem;
   }
 
   .wrapper {
@@ -89,7 +96,7 @@ const StyledProject = styled.div`
     flex-wrap: wrap;
   }
 
-  span {
+  p {
     list-style: none;
   }
 
@@ -132,7 +139,6 @@ const StyledLink = styled.a`
   span {
     display: inline-block;
     position: relative;
-    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 
     :after {
       content: "";
@@ -141,7 +147,6 @@ const StyledLink = styled.a`
       width: 100%;
       box-shadow: 0 1px rgba(255, 255, 255, 0.6);
       background: black;
-      transition: background 0.5s cubic-bezier(0.55, 0, 0.1, 1);
     }
 
     :hover {

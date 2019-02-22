@@ -1,5 +1,6 @@
 import React from "react";
 import Document, { Head, Main, NextScript } from "next/document";
+import { ContextConsumer } from "../src/context/index";
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
@@ -16,10 +17,15 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>{this.props.styleTags}</Head>
+
+        {/* <ContextConsumer>
+          {({ footer }) => ( */}
         <body>
           <Main />
           <NextScript />
         </body>
+        {/* )}
+        </ContextConsumer> */}
       </html>
     );
   }

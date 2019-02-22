@@ -30,7 +30,7 @@ const LeftSide = () => {
 
                 <div className="social">
                   {socail.map((s, i) => (
-                    <a href={s.link} key={i} class>
+                    <a href={s.link} key={i}>
                       @{s.title}
                     </a>
                   ))}

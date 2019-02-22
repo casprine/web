@@ -20,6 +20,16 @@ export const body = theme("mode", {
   true: "rgb(27,27,30)"
 });
 
+export const footer = theme("mode", {
+  true: "#E7EEF8",
+  false: "rgb(27,27,30)"
+});
+
+export const footerText = theme("mode", {
+  false: "#fff",
+  true: ""
+});
+
 export const border = theme("mode", {
   false: " hsl(209, 61%, 16%)",
   true: " hsl(36, 77%, 49%)"

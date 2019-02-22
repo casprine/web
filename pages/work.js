@@ -6,8 +6,8 @@ import ProjectCard from "../src/components/work/projectCard";
 import { projects } from "../src/data/projects";
 
 const StyledWorkWrapper = styled.div`
-  @media (max-width: 450px) {
-    padding-bottom: 40px;
+  @media (max-width: 750px) {
+    padding-bottom: 18rem;
   }
 `;
 
@@ -20,6 +20,7 @@ const Work = () => (
     <Layout>
       <Header />
       <SectionHeader />
+
       <StyledWorkWrapper className="grid-3">
         {projects.map((project, i) => (
           <ProjectCard key={i} {...project} />

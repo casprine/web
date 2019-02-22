@@ -6,7 +6,7 @@ import { body } from "./theme";
 
 const layoutStyles = {
   wrapper: {
-    width: "85vw",
+    // width: "85vw",
     minHeight: "100vh",
     marginRight: "auto",
     marginLeft: "auto",
@@ -22,11 +22,14 @@ const Layout = ({ children }) => (
     </Head>
 
     <ContextConsumer>
-      {({ theme }) => (
+      {({ theme, footer }) => (
         <ThemeProvider theme={{ mode: theme }}>
           <StyledLayout>
             <div>
-              <div style={layoutStyles.wrapper} className="children">
+              <div
+                style={layoutStyles.wrapper}
+                className={!footer ? "children" : "children overflow"}
+              >
                 {children}
               </div>
             </div>
@@ -39,17 +42,21 @@ const Layout = ({ children }) => (
 
 const StyledLayout = styled.div`
   background: ${body};
-  background-image: url("https://d30j33t1r58ioz.cloudfront.net/static/backgrounds/background-dark-grid-fade.png");
+  /* background-image: url("https://d30j33t1r58ioz.cloudfront.net/static/backgrounds/background-dark-grid-fade.png"); */
   background-repeat: repeat-x;
   background-position: top;
   height: 100%;
+
   .children {
     background: rgba(0, 0, 0, 0)
       linear-gradient(rgba(0, 0, 32, 0), ${body} 320px) repeat scroll 0% 0%;
-
+    padding: 0 10rem;
+    @media (max-width: 1307px) and (min-width: 749px) {
+      padding: 0 1rem;
+    }
     @media (max-width: 750px) {
-      /* outline: 1px solid red; */
-      background: none;
+      padding: 0 2rem;
+      background: ${body};
     }
   }
 `;
