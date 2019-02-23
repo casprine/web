@@ -31,7 +31,7 @@ const StyledSectionHeader = styled.div`
     margin-bottom: 0.8rem;
     padding-left: 4rem;
     position: relative;
-    font-family: "gte";
+    font-family: "";
 
     :before {
       position: absolute;

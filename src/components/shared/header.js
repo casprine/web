@@ -156,29 +156,27 @@ const StyledBottomNav = styled.header`
 
   .nav {
     display: grid;
+  }
 
-    }
+  nav {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    align-items: center;
 
-    nav {
-      flex-direction: column;
-      display: flex;
+    .link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
       width: 100%;
-      align-items: center;
-
-      .link {
-        text-decoration: none;
-        color: inherit;
-        display: block;
-        width: 100%;
-        text-align: center;
-        text-transform: uppercase;
-        padding: 16px 30px;
-      }
+      text-align: center;
+      text-transform: uppercase;
+      padding: 16px 30px;
     }
+  }
 
-    .switch {
-      padding: 12px 24px;
-    }
+  .switch {
+    padding: 12px 24px;
   }
 `;
 

@@ -12,21 +12,15 @@ const GlobalStyles = createGlobalStyle`
   }
 
   @font-face {
-    font-family: 'gte';
-    src:  url('../static/fonts/gte.ttf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: auto;
-  }
-
-
-  @font-face {
     font-family: 'expo2';
     src:  url('../static/fonts/expo2.woff') format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: auto;
   }
+
+
+
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -74,6 +68,7 @@ a {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+
 
 .grid-3 > * {
   width: -webkit-calc(33.33% - 2 * 40px/3);

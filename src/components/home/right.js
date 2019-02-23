@@ -18,10 +18,11 @@ const RightSide = () => {
               <div className="wrapper">
                 <div className="projects">
                   <Link href="/projects">
-                    <StyledHeading>@Projects</StyledHeading>
+                    <StyledHeading>
+                      <span>@</span>Projects
+                    </StyledHeading>
                   </Link>
                   {projs.map((proj, i) => {
-                    console.log(i);
                     return (
                       <StyledProject>
                         <span className="about">{proj.about}</span>
@@ -36,10 +37,11 @@ const RightSide = () => {
                 </div>
 
                 <div className="blog">
-                  <StyledHeading>@Writings</StyledHeading>
+                  <StyledHeading>
+                    <span>@</span>Writings
+                  </StyledHeading>
                   <div className="posts">
                     {blogs.map((b, i) => {
-                      console.log(i);
                       return (
                         <StyledBlogPost key={i}> {b.title} </StyledBlogPost>
                       );
@@ -82,6 +84,10 @@ const StyledHeading = styled.div`
   color: ${white};
   font-size: 20px;
   cursor: pointer;
+
+  span {
+    font-family: "geo";
+  }
 `;
 
 const StyledProject = styled.div`
@@ -128,6 +134,8 @@ const StyledBlogPost = styled.article`
   transition-property: margin-right, opacity;
   transition-duration: 0.6s;
   transition-timing-function: cubic-bezier(0.8, 0.03, 0.25, 1);
+  font-size: 14px;
+  text-transform: lowercase;
   cursor: pointer;
   :hover {
     margin-right: 10px;

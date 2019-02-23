@@ -74,6 +74,10 @@ const StyledLeftSide = styled.div`
       display: inline-block;
       text-transform: capitalize;
       color: ${white};
+      font-size: 14px;
+
+      font-family: "expo2";
+
       :first-child {
         padding-left: 5px;
       }
@@ -82,11 +86,7 @@ const StyledLeftSide = styled.div`
 
   .social {
     display: flex;
-    flex-direction: column;
-
-    @media (max-width: 750px) {
-      flex-direction: row;
-    }
+    padding: 0 5px;
 
     a {
       padding: 5px 0;
@@ -98,7 +98,6 @@ const StyledLeftSide = styled.div`
       cursor: pointer;
 
       @media (max-width: 750px) {
-        padding: 0 5px;
       }
       :hover {
         margin-left: 10px;
