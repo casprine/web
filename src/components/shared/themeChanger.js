@@ -6,10 +6,7 @@ import { white } from "./theme";
 const ThemeChanger = () => {
   const [width, setWidth] = useState(0);
 
-  console.log(width, "hooks");
-
   useEffect(() => {
-    console.log("component has mounted", window.innerWidth);
     const windowWidth = window.innerWidth;
     setWidth(windowWidth);
   });

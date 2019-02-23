@@ -29,13 +29,3 @@ export const footerText = theme("mode", {
   false: "#fff",
   true: ""
 });
-
-export const border = theme("mode", {
-  false: " hsl(209, 61%, 16%)",
-  true: " hsl(36, 77%, 49%)"
-});
-
-export const darkBorder = theme("mode", {
-  true: " hsl(209, 61%, 16%)",
-  false: " hsl(36, 77%, 49%)"
-});

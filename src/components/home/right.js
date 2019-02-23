@@ -107,23 +107,28 @@ const StyledProject = styled.div`
   }
 
   a {
-    width: 75px;
+    width: 20%;
     text-transform: lowercase;
     text-align: right;
+    margin-bottom: auto;
 
     @media (max-width: 750px) {
       text-align: left;
       width: 100%;
       font-size: 18px;
+      margin: 0 auto;
       padding: 10px 0;
     }
   }
   .about {
     color: ${grey};
     text-transform: lowercase;
+    width: 80%;
+    text-align: left;
+    margin-right: auto;
 
     @media (max-width: 750px) {
-      margin-left: auto;
+      width: 100%;
     }
   }
 `;

@@ -19,7 +19,6 @@ const SectionHeader = () => {
 
 const StyledSectionHeader = styled.div`
   width: 100%;
-
   @media (max-width: 560px) {
     margin-top: 20px;
   }
@@ -31,7 +30,12 @@ const StyledSectionHeader = styled.div`
     margin-bottom: 0.8rem;
     padding-left: 4rem;
     position: relative;
-    font-family: "";
+    font-family: "expo2";
+
+    @media (max-width: 560px) {
+      outline: 1px solid red;
+      font-size: 1.1em;
+    }
 
     :before {
       position: absolute;
@@ -57,7 +61,7 @@ const StyledSectionHeader = styled.div`
     font-family: "geo";
 
     @media (max-width: 655px) {
-      font-size: 30px;
+      font-size: 20px;
     }
   }
 
@@ -67,6 +71,10 @@ const StyledSectionHeader = styled.div`
     font-size: 1.2rem;
     color: ${grey};
     margin-bottom: 0.8rem;
+
+    @media (max-width: 655px) {
+      font-size: 15px;
+    }
   }
 `;
 
