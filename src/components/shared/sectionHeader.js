@@ -33,7 +33,6 @@ const StyledSectionHeader = styled.div`
     font-family: "expo2";
 
     @media (max-width: 560px) {
-      outline: 1px solid red;
       font-size: 1.1em;
     }
 
