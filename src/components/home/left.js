@@ -89,7 +89,7 @@ const StyledLeftSide = styled.div`
     padding: 0 5px;
 
     a {
-      padding: 5px 0;
+      padding: 0 5px;
       color: ${grey};
       text-transform: lowercase;
       transition-property: margin-left, opacity;
@@ -98,6 +98,7 @@ const StyledLeftSide = styled.div`
       cursor: pointer;
 
       @media (max-width: 750px) {
+        display: none;
       }
       :hover {
         margin-left: 10px;
