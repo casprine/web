@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import { white, grey, black } from "../shared/theme";
+import { white, grey, black, projectCard } from "../shared/theme";
 
 const ProjectCard = ({ name, stacks, about, github }) => {
   return (
@@ -23,7 +23,7 @@ const ProjectCard = ({ name, stacks, about, github }) => {
 };
 
 const StyledProject = styled.div`
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 1.5rem;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -33,7 +33,7 @@ const StyledProject = styled.div`
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   border-radius: 3px;
-  border-top: 4px solid red;
+  border-top: 3px solid ${projectCard};
 
   div {
     padding: 0.5rem 0;
@@ -43,8 +43,7 @@ const StyledProject = styled.div`
   }
 
   @media (max-width: 750px) {
-    border: none;
-    padding: 0;
+    padding: 0.8rem 1rem;
   }
 
   .name {
@@ -71,16 +70,20 @@ const StyledProject = styled.div`
 
   .stacks {
     margin-top: auto;
-    font-size: 16px;
+    font-size: 15px;
     text-transform: lowercase;
     display: flex;
     flex-wrap: wrap;
-    color: ${grey};
+    color: white;
 
     span {
       display: block;
       margin: 0 5px;
       font-family: "inter";
+      background: ${projectCard};
+      padding: 0.1rem 0.3rem;
+      border-radius: 2px;
+
       &:first-child {
         margin-left: 0;
       }

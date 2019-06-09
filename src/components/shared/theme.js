@@ -15,6 +15,11 @@ export const grey = theme("mode", {
   true: "#fff"
 });
 
+export const projectCard = theme("mode", {
+  false: " #2b6cb0",
+  true: " #38a169"
+});
+
 export const body = theme("mode", {
   false: "#E7EEF8",
   true: "rgb(16, 23, 30) "
