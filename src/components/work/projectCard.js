@@ -23,14 +23,13 @@ const ProjectCard = ({ name, stacks, about, github }) => {
 };
 
 const StyledProject = styled.div`
-  padding: 1.2rem 2rem;
+  padding: 1rem 1.5rem;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   cursor: pointer;
   color: ${white};
-  border: 5px solid white;
-  border-radius: 4px;
+  background: white;
 
   div {
     padding: 0.5rem 0;
@@ -48,7 +47,7 @@ const StyledProject = styled.div`
     letter-spacing: -0.03em;
     line-height: 1.1;
     word-wrap: break-word;
-    font-family: "expo2";
+    font-family: "maison";
     font-size: 1.5rem;
   }
 
@@ -58,7 +57,7 @@ const StyledProject = styled.div`
     line-height: 1.4;
     font-size: 1rem;
     text-rendering: auto;
-    font-family: "geo";
+    font-family: "inter";
     color: ${grey};
 
     @media (max-width: 750px) {

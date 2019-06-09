@@ -6,8 +6,8 @@ import { body } from "./theme";
 
 const layoutStyles = {
   wrapper: {
-    // width: "85vw",
     minHeight: "100vh",
+    Maxwidth: "800px",
     marginRight: "auto",
     marginLeft: "auto",
     display: "flex",
@@ -25,13 +25,11 @@ const Layout = ({ children }) => (
       {({ theme, footer }) => (
         <ThemeProvider theme={{ mode: theme }}>
           <StyledLayout>
-            <div>
-              <div
-                style={layoutStyles.wrapper}
-                className={!footer ? "children" : "children overflow"}
-              >
-                {children}
-              </div>
+            <div
+              style={layoutStyles.wrapper}
+              className={!footer ? "children" : "children overflow"}
+            >
+              {children}
             </div>
           </StyledLayout>
         </ThemeProvider>
@@ -42,15 +40,20 @@ const Layout = ({ children }) => (
 
 const StyledLayout = styled.div`
   background: ${body};
-  /* background-image: url("https://d30j33t1r58ioz.cloudfront.net/static/backgrounds/background-dark-grid-fade.png"); */
   background-repeat: repeat-x;
   background-position: top;
   height: 100%;
+  outline: 1px solid red;
+
+  * {
+    outline: 1px solid red;
+  }
 
   .children {
     background: rgba(0, 0, 0, 0)
       linear-gradient(rgba(0, 0, 32, 0), ${body} 320px) repeat scroll 0% 0%;
     padding: 0 10rem;
+    width: 900px;
     @media (max-width: 1307px) and (min-width: 749px) {
       padding: 0 1rem;
     }

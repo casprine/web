@@ -1,19 +1,17 @@
 import { createGlobalStyle } from "styled-components";
-import { body } from "../src/components/shared/theme";
 
 const GlobalStyles = createGlobalStyle`
 
+ @font-face {
+  font-family: 'inter';
+  font-weight: 100 900;
+  font-style: oblique 0deg 10deg;
+  src: url("../static/fonts/inter.woff2") format("woff2-variations"),
+       url("../static/fonts/inter.woff2") format("woff2");
+}
   @font-face {
-    font-family: 'geo';
-    src:  url('../static/fonts/geomanist-book.ttf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: auto;
-  }
-
-  @font-face {
-    font-family: 'expo2';
-    src:  url('../static/fonts/expo2.woff') format("woff2");
+    font-family: 'maison';
+    src:  url('../static/fonts/maison.woff') format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: auto;
@@ -24,11 +22,18 @@ const GlobalStyles = createGlobalStyle`
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family:"geo",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     scroll-behavior: smooth;
+   font-variation-settings: "slnt" 0deg;  
     margin:0;
     padding:0;
+  }
+
+ * { 
+   }
+  .italic { 
+    font-variation-settings: "slnt" 10deg;
   }
 
 #__next{
@@ -55,9 +60,8 @@ a {
   color:inherit;
 
   }
-.wrapper {
-    width: 80%;
-  }
+
+  
 
 .grid-3 {
   display: -webkit-box;
