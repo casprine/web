@@ -1,9 +1,10 @@
 import React, { Fragment } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { ContextConsumer } from "../../context/index";
 import Link from "next/link";
 import ThemeChanger from "./themeChanger";
 import { footer, footerText, white } from "./theme";
+import Logo from "./logo";
+import { ContextConsumer } from "../../context/index";
 
 const Header = () => (
   <Fragment>
@@ -13,7 +14,7 @@ const Header = () => (
           <ThemeProvider theme={{ mode: theme }}>
             <StyledHeader>
               <Link href="/">
-                <div className="logo">C</div>
+                <Logo />
               </Link>
 
               <div className="links">
@@ -106,7 +107,7 @@ const Header = () => (
               </div>
             </div>
             <div className="bar">
-              <div className="logo">c</div>
+              <Logo />
               <div className="open" onClick={toggleFooter}>
                 <span>&#11044;</span>
                 <span>&#11044;</span>

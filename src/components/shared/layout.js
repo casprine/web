@@ -46,14 +46,14 @@ const StyledLayout = styled.div`
   outline: 1px solid red;
 
   * {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
   }
 
   .children {
     background: rgba(0, 0, 0, 0)
       linear-gradient(rgba(0, 0, 32, 0), ${body} 320px) repeat scroll 0% 0%;
-    padding: 0 10rem;
-    width: 900px;
+    /* padding: 0 10rem; */
+    width: 70vw;
     @media (max-width: 1307px) and (min-width: 749px) {
       padding: 0 1rem;
     }
