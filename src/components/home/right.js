@@ -59,7 +59,7 @@ const RightSide = () => {
 
 const StyledRightSide = styled.div`
   color: ${white};
-  width: 50%;
+  width: 70%;
 
   @media (max-width: 750px) {
     width: 100%;
@@ -80,7 +80,7 @@ const StyledRightSide = styled.div`
 `;
 
 const StyledHeading = styled.div`
-  font-family: "expo2";
+  font-family: "maison";
   color: ${white};
   font-size: 20px;
   cursor: pointer;

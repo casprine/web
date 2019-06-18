@@ -1,8 +1,10 @@
 import React, { Fragment } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { white, grey } from "../shared/theme";
+
 import { ContextConsumer } from "../../context/index";
-import { stack, socail } from "../../data/stack";
+import { stack, social } from "../../data/stack";
+import { Stack } from "../shared";
+import { white, grey } from "../shared/theme";
 
 const LeftSide = () => {
   return (
@@ -19,20 +21,22 @@ const LeftSide = () => {
 
                 <div className="description">
                   I design and develop experiences that make people's lives
-                  simple Let me help you grow your business & make your product
-                  look pretty while I'm at it.
+                  simple. <br /> Let me help you grow your business & make your
+                  product look pretty while I'm at it.
                 </div>
-                <div className="stack">
-                  I currently work with
+                <div className="stacks">
+                  <span className="description text">
+                    I currently work with{" "}
+                  </span>
                   {stack.map((s, i) => (
-                    <li key={i}>{s.name}</li>
+                    <Stack key={i} name={s} />
                   ))}
                 </div>
 
                 <div className="social">
-                  {socail.map((s, i) => (
+                  {social.map((s, i) => (
                     <a href={s.link} key={i}>
-                      @{s.title}
+                      {s.title}
                     </a>
                   ))}
                 </div>
@@ -47,63 +51,55 @@ const LeftSide = () => {
 
 const StyledLeftSide = styled.div`
   color: ${white};
-  width: 50%;
+  width: 70%;
+  font-family: "maison";
 
   @media (max-width: 750px) {
     width: 100%;
   }
 
   div {
-    margin: 40px 0;
+    margin: 20px 0;
   }
   .heading {
-    font-size: 30px;
-    font-family: "expo2";
-    line-height: 38px;
+    letter-spacing: -0.03em;
+    word-wrap: break-word;
+    font-size: 35px;
+    color: ${white};
+    text-rendering: auto;
+    margin-bottom: 0.5rem;
   }
 
-  .description,
-  .stack {
-    color: ${grey};
-    font-family: "geo";
+  .description {
     line-height: 28px;
   }
 
-  .stack {
-    li {
-      padding: 0 2px;
-      display: inline-block;
-      text-transform: capitalize;
-      color: ${white};
-      font-size: 14px;
+  .text {
+    color: ${white};
+    font-family: "inter";
+    margin-right: 5px;
+  }
 
-      font-family: "expo2";
+  .stacks {
+    outline: 1px solid red;
 
-      :first-child {
-        padding-left: 5px;
-      }
+    .stack {
+      outline: red;
+      margin-right: 5px;
+      margin-left: 0;
     }
   }
 
   .social {
     display: flex;
-    padding: 0 5px;
-
     a {
-      padding: 0 5px;
+      margin-right: 5px;
       color: ${grey};
       text-transform: lowercase;
-      transition-property: margin-left, opacity;
-      transition-duration: 0.6s;
-      transition-timing-function: cubic-bezier(0.8, 0.03, 0.25, 1);
       cursor: pointer;
 
       @media (max-width: 750px) {
         display: none;
-      }
-      :hover {
-        margin-left: 10px;
-        opacity: 0.5;
       }
     }
   }

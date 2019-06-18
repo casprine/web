@@ -141,6 +141,7 @@ const StyledHeader = styled.div`
       padding: 0 8px;
       position: relative;
       font-family: "maison";
+      text-transform: uppercase;
       :hover {
         font-style: italic;
       }

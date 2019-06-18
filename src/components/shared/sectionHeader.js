@@ -18,6 +18,7 @@ const SectionHeader = () => {
 
 const StyledSectionHeader = styled.div`
   width: 100%;
+  margin-bottom: 10px;
   @media (max-width: 560px) {
     margin-top: 20px;
   }
@@ -30,11 +31,11 @@ const StyledSectionHeader = styled.div`
     color: ${white};
     text-rendering: auto;
     text-transform: capitalize;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
     font-family: "maison";
 
     @media (max-width: 655px) {
-      font-size: 20px;
+      font-size: 30px;
     }
   }
 
@@ -43,9 +44,7 @@ const StyledSectionHeader = styled.div`
     line-height: 1.4;
     font-size: 1rem;
     color: ${grey};
-    margin-bottom: 0.8rem;
-    font-family: "inter";
-
+    font-family: "maison";
     @media (max-width: 655px) {
       font-size: 15px;
     }

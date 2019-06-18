@@ -1,15 +1,18 @@
 export const stack = [
-  { id: 1, name: "React + Native," },
-  { id: 2, name: "Nextjs," },
-  { id: 3, name: "Mobx," },
-  { id: 4, name: "CSS/Sass," },
-  { id: 5, name: "Vue/Vuex," },
-  { id: 6, name: "SkechApp," },
-  { id: 7, name: "figma," },
-  { id: 8, name: "Uxpin" }
+  "react",
+  "react native",
+  "tailwindcss",
+  "svelte/sapper",
+  "nextjs",
+  "gatsby",
+  "firebase",
+  "mobx",
+  "css/sass",
+  "sketchApp",
+  "figma"
 ];
 
-export const socail = [
+export const social = [
   {
     title: "twitter",
     link: "https://twitter.com/casprine_ix"

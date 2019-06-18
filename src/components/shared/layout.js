@@ -22,37 +22,31 @@ const Layout = ({ children }) => (
     </Head>
 
     <ContextConsumer>
-      {({ theme, footer }) => (
-        <ThemeProvider theme={{ mode: theme }}>
-          <StyledLayout>
-            <div
-              style={layoutStyles.wrapper}
-              className={!footer ? "children" : "children overflow"}
-            >
-              {children}
-            </div>
-          </StyledLayout>
-        </ThemeProvider>
-      )}
+      {({ theme, footer }) => {
+        return (
+          <ThemeProvider theme={{ mode: theme }}>
+            <StyledLayout>
+              <div
+                style={layoutStyles.wrapper}
+                className={!footer ? "children" : "children overflow"}
+              >
+                {children}
+              </div>
+            </StyledLayout>
+          </ThemeProvider>
+        );
+      }}
     </ContextConsumer>
   </Fragment>
 );
 
 const StyledLayout = styled.div`
   background: ${body};
-  background-repeat: repeat-x;
-  background-position: top;
   height: 100%;
-  outline: 1px solid red;
-
-  * {
-    /* outline: 1px solid red; */
-  }
-
+  background: ${body};
   .children {
-    background: rgba(0, 0, 0, 0)
-      linear-gradient(rgba(0, 0, 32, 0), ${body} 320px) repeat scroll 0% 0%;
-    width: 75vw;
+    width: 70vw;
+
     @media (max-width: 1307px) and (min-width: 749px) {
       padding: 0 1rem;
     }

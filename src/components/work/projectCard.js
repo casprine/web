@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
 import { white, grey, black, projectCard } from "../shared/theme";
+import { Stack } from "../shared";
 
 const ProjectCard = ({ name, stacks, about, github }) => {
   return (
@@ -11,9 +12,7 @@ const ProjectCard = ({ name, stacks, about, github }) => {
           <div className="description">{about}</div>
           <div className="stacks ">
             {stacks.map((stack, i) => (
-              <span className="stack" key={i}>
-                {stack}
-              </span>
+              <Stack name={stack} key={i} />
             ))}
           </div>
         </StyledProject>
@@ -65,28 +64,6 @@ const StyledProject = styled.div`
 
     @media (max-width: 750px) {
       font-size: 15px;
-    }
-  }
-
-  .stacks {
-    margin-top: auto;
-    font-size: 15px;
-    text-transform: lowercase;
-    display: flex;
-    flex-wrap: wrap;
-    color: white;
-
-    span {
-      display: block;
-      margin: 0 5px;
-      font-family: "inter";
-      background: ${projectCard};
-      padding: 0.1rem 0.3rem;
-      border-radius: 2px;
-
-      &:first-child {
-        margin-left: 0;
-      }
     }
   }
 `;

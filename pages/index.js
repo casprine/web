@@ -5,14 +5,17 @@ import { LeftSide, RightSide } from "../src/components/home/index";
 import styled from "styled-components";
 
 const StyledHome = styled.div`
+  outline: 1px solid red;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   .wrapper {
     margin: 0 auto;
   }
   @media (max-width: 750px) {
-    flex-wrap: wrap;
+    flex-wrap: PLFwrap;
 
     .wrapper {
       width: 100%;

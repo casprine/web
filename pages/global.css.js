@@ -30,7 +30,9 @@ const GlobalStyles = createGlobalStyle`
     padding:0;
   }
 
- * { 
+ * {
+    font-variation-settings: "slnt" 10deg;
+
    }
   .italic { 
     font-variation-settings: "slnt" 10deg;
@@ -47,6 +49,13 @@ const GlobalStyles = createGlobalStyle`
     display:block;
   }
 }
+ .stacks {
+    margin-top: auto;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+  }
 
 hr{
   display: table-cell;
