@@ -5,14 +5,16 @@ import { projectCard } from "./theme";
 const Stack = ({ name }) => <StyledStack>{name}</StyledStack>;
 
 const StyledStack = styled.div`
-  display: block;
-  margin-right: 10px !important;
+  margin-right: 10px;
+  display: inline-block;
   font-family: "apercu";
   margin-bottom: 5px;
   background: ${projectCard};
-  padding: 0.2rem 0.3rem;
+  padding: 0.2rem 0.3rem !important;
   border-radius: 2px;
+  color: white;
   text-transform: lowercase;
+
   &:first-child {
     margin-left: 0;
   }

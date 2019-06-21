@@ -114,14 +114,7 @@ a {
 }
 
 
-@keyframes link {
-	from {
-		transform: scaleX(0);
-	}
-	to {
-		transform: scaleX(1);
-	}
-}
+
 
 
 

@@ -11,13 +11,18 @@ export const white = theme("mode", {
 });
 
 export const grey = theme("mode", {
-  false: "hsl(209, 34%, 30%)",
+  false: "rgb(55, 70, 95);",
   true: "#fff"
 });
 
 export const projectCard = theme("mode", {
   false: " #2b6cb0",
   true: " #38a169"
+});
+
+export const borders = theme("mode", {
+  false: "#c5d4f1",
+  true: "#9AE6B4"
 });
 
 export const body = theme("mode", {

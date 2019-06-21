@@ -42,9 +42,9 @@ const StyledSectionHeader = styled.div`
   .description {
     letter-spacing: -0.02em;
     line-height: 1.4;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: ${grey};
-    font-family: "apercu";
+    text-transform: lowercase;
     @media (max-width: 655px) {
       font-size: 15px;
     }

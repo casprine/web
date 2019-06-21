@@ -1,14 +1,23 @@
 import React, { Fragment } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { white, grey } from "../shared/theme";
+import Link from "next/link";
+
+// Theme
+import { white, grey, projectCard, borders } from "../shared/theme";
+
+// Context
 import { ContextConsumer } from "../../context/index";
+
+// Data
 import { projects } from "../../data/projects";
 import { blogPosts } from "../../data/blogs";
-import Link from "next/link";
+
+// Components
+import { Article } from "../writings/index";
 
 const RightSide = () => {
   const projs = projects.slice(0, 3);
-  const blogs = blogPosts.slice(0, 4);
+  const blogs = blogPosts.slice(0, 3);
 
   return (
     <Fragment>
@@ -17,31 +26,26 @@ const RightSide = () => {
           <ThemeProvider theme={{ mode: theme }}>
             <StyledRightSide footer={footer}>
               <div className="wrapper">
-                <div className="projects">
-                  <Link href="/projects">
-                    <StyledHeading>Projects</StyledHeading>
-                  </Link>
+                <StyledProjects className="projects">
+                  <span>built</span>
                   {projs.map((proj, i) => {
                     return (
-                      <StyledProject>
-                        <span className="about">{proj.about}</span>
-                        <StyledLink href={proj.github}>
-                          <span key={i} className="link">
-                            @{proj.name}
-                          </span>
-                        </StyledLink>
-                      </StyledProject>
+                      <StyledLink href={proj.link} key={i}>
+                        {proj.name}
+                      </StyledLink>
                     );
                   })}
-                </div>
+                  <span>
+                    and a some other stuff{" "}
+                    <StyledLink href="/works">here</StyledLink>
+                  </span>
+                </StyledProjects>
 
                 <div className="blog">
                   <StyledHeading>Writings</StyledHeading>
                   <div className="posts">
                     {blogs.map((b, i) => {
-                      return (
-                        <StyledBlogPost key={i}> {b.title} </StyledBlogPost>
-                      );
+                      return <Article key={i}> {b.title} </Article>;
                     })}
                   </div>
                 </div>
@@ -58,10 +62,6 @@ const StyledRightSide = styled.div`
   color: ${white};
   width: 70%;
 
-  * {
-    outline: 1px solid red;
-  }
-
   @media (max-width: 750px) {
     width: 100%;
     margin-bottom: ${props => (props.footer ? "15rem" : "4rem")};
@@ -74,70 +74,29 @@ const StyledRightSide = styled.div`
   div {
     margin: 40px 0;
   }
+
+  .blog {
+    * {
+      outline: 1px solid red;
+    }
+  }
 `;
 
 const StyledHeading = styled.div`
-  font-family: "maison";
+  font-family: "apercu";
   color: ${white};
-  font-size: 20px;
-  cursor: pointer;
-
-  span {
-    font-family: "geo";
-  }
+  font-size: 1.5rem;
 `;
 
-const StyledProject = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin: 20px 0 !important;
-  font-size: 14px;
-
-  @media (max-width: 750px) {
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
-  }
-
-  p {
-    list-style: none;
-  }
-
-  a {
-    width: 20%;
-    text-transform: lowercase;
-    text-align: right;
-    margin-bottom: auto;
-
-    @media (max-width: 750px) {
-      text-align: left;
-      width: 100%;
-      font-size: 18px;
-      margin: 0 auto;
-      padding: 10px 0;
-    }
-  }
-  .about {
-    color: ${grey};
-    text-transform: lowercase;
-    width: 80%;
-    text-align: left;
-    margin-right: auto;
-
-    @media (max-width: 750px) {
-      width: 100%;
-    }
-  }
+const StyledProjects = styled.div`
+  font-family: "apercu";
+  font-size: 18px;
 `;
 
 const StyledBlogPost = styled.article`
   margin: 15px 0;
   color: ${grey};
-  transition-property: margin-right, opacity;
-  transition-duration: 0.6s;
-  transition-timing-function: cubic-bezier(0.8, 0.03, 0.25, 1);
   font-size: 14px;
-  text-transform: lowercase;
   cursor: pointer;
   :hover {
     margin-right: 10px;
@@ -146,22 +105,16 @@ const StyledBlogPost = styled.article`
 `;
 
 const StyledLink = styled.a`
-  span {
-    display: inline-block;
-    position: relative;
+  text-transform: lowercase;
+  color: ${grey};
+  margin: 0 0.2rem !important;
+  display: inline-block;
+  color: inherit;
+  border-bottom: 2px solid ${borders};
+  transition: all 0.25s;
 
-    :after {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 100%;
-      box-shadow: 0 1px rgba(255, 255, 255, 0.6);
-      background: black;
-    }
-
-    :hover {
-      background: hsl(36, 77%, 49%);
-    }
+  &:hover {
+    border-bottom: 2px solid ${projectCard};
   }
 `;
 

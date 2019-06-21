@@ -42,11 +42,6 @@ const LeftSide = () => {
 const StyledLeftSide = styled.div`
   color: ${white};
   width: 70%;
-  font-family: "inter";
-
-  * {
-    outline: 1px solid red;
-  }
 
   @media (max-width: 750px) {
     width: 100%;
@@ -79,7 +74,7 @@ const StyledLeftSide = styled.div`
     color: ${white};
     font-size: 17px;
     margin-right: 5px;
-    display: block;
+    display: inline-block;
     line-height: 23px;
   }
 
