@@ -25,7 +25,7 @@ const RightSide = () => {
         {({ theme, footer }) => (
           <ThemeProvider theme={{ mode: theme }}>
             <StyledRightSide footer={footer}>
-              <div className="wrapper">
+              <div className="wrapper mb">
                 <StyledProjects className="projects">
                   <span>built</span>
                   {projs.map((proj, i) => {
@@ -41,11 +41,11 @@ const RightSide = () => {
                   </span>
                 </StyledProjects>
 
-                <div className="blog">
+                <div className="blog mb">
                   <StyledHeading>Writings</StyledHeading>
                   <div className="posts">
-                    {blogs.map((b, i) => {
-                      return <Article key={i}> {b.title} </Article>;
+                    {blogs.map((article, i) => {
+                      return <Article {...article} key={i} />;
                     })}
                   </div>
                 </div>
@@ -67,18 +67,8 @@ const StyledRightSide = styled.div`
     margin-bottom: ${props => (props.footer ? "15rem" : "4rem")};
   }
 
-  .wrapper {
-    margin: 0 auto 0 auto;
-  }
-
-  div {
+  .mb {
     margin: 40px 0;
-  }
-
-  .blog {
-    * {
-      outline: 1px solid red;
-    }
   }
 `;
 
@@ -91,6 +81,7 @@ const StyledHeading = styled.div`
 const StyledProjects = styled.div`
   font-family: "apercu";
   font-size: 18px;
+  margin-top: 30px;
 `;
 
 const StyledBlogPost = styled.article`

@@ -19,12 +19,12 @@ const LeftSide = () => {
                   Ghana 🇬🇭 in love with React and CSS
                 </div>
 
-                <div className="description mb-20">
+                <div className="description mb">
                   I design and develop experiences that make people's lives
                   simple. <br /> Let me help you grow your business & make your
                   product look pretty while I'm at it.
                 </div>
-                <div className="stacks">
+                <div className="stacks mb">
                   <div className="text">I currently work with </div>
                   {stack.map((s, i) => (
                     <Stack key={i} name={s} />
@@ -47,7 +47,7 @@ const StyledLeftSide = styled.div`
     width: 100%;
   }
 
-  .mb-20 {
+  .mb {
     margin: 20px 0;
   }
 
