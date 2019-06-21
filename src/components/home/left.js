@@ -15,29 +15,19 @@ const LeftSide = () => {
             <StyledLeftSide>
               <div className="wrapper">
                 <div className="heading">
-                  Hi, I'm Casprine, an independent designer, frontend developer
-                  and ui enthusiast.
+                  Hi, I am Casprine, frontend developer and ui designer based in
+                  Ghana 🇬🇭 in love with React and CSS
                 </div>
 
-                <div className="description">
+                <div className="description mb-20">
                   I design and develop experiences that make people's lives
                   simple. <br /> Let me help you grow your business & make your
                   product look pretty while I'm at it.
                 </div>
                 <div className="stacks">
-                  <span className="description text">
-                    I currently work with{" "}
-                  </span>
+                  <div className="text">I currently work with </div>
                   {stack.map((s, i) => (
                     <Stack key={i} name={s} />
-                  ))}
-                </div>
-
-                <div className="social">
-                  {social.map((s, i) => (
-                    <a href={s.link} key={i}>
-                      {s.title}
-                    </a>
                   ))}
                 </div>
               </div>
@@ -52,15 +42,20 @@ const LeftSide = () => {
 const StyledLeftSide = styled.div`
   color: ${white};
   width: 70%;
-  font-family: "maison";
+  font-family: "inter";
+
+  * {
+    outline: 1px solid red;
+  }
 
   @media (max-width: 750px) {
     width: 100%;
   }
 
-  div {
+  .mb-20 {
     margin: 20px 0;
   }
+
   .heading {
     letter-spacing: -0.03em;
     word-wrap: break-word;
@@ -68,26 +63,24 @@ const StyledLeftSide = styled.div`
     color: ${white};
     text-rendering: auto;
     margin-bottom: 0.5rem;
+    font-family: "apercu";
   }
 
   .description {
     line-height: 28px;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
+      Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   }
 
   .text {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
+      Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     color: ${white};
-    font-family: "inter";
+    font-size: 17px;
     margin-right: 5px;
-  }
-
-  .stacks {
-    outline: 1px solid red;
-
-    .stack {
-      outline: red;
-      margin-right: 5px;
-      margin-left: 0;
-    }
+    display: block;
+    line-height: 23px;
   }
 
   .social {

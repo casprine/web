@@ -9,6 +9,7 @@ import Link from "next/link";
 const RightSide = () => {
   const projs = projects.slice(0, 3);
   const blogs = blogPosts.slice(0, 4);
+
   return (
     <Fragment>
       <ContextConsumer>
@@ -18,9 +19,7 @@ const RightSide = () => {
               <div className="wrapper">
                 <div className="projects">
                   <Link href="/projects">
-                    <StyledHeading>
-                      <span>@</span>Projects
-                    </StyledHeading>
+                    <StyledHeading>Projects</StyledHeading>
                   </Link>
                   {projs.map((proj, i) => {
                     return (
@@ -37,9 +36,7 @@ const RightSide = () => {
                 </div>
 
                 <div className="blog">
-                  <StyledHeading>
-                    <span>@</span>Writings
-                  </StyledHeading>
+                  <StyledHeading>Writings</StyledHeading>
                   <div className="posts">
                     {blogs.map((b, i) => {
                       return (
@@ -61,17 +58,17 @@ const StyledRightSide = styled.div`
   color: ${white};
   width: 70%;
 
+  * {
+    outline: 1px solid red;
+  }
+
   @media (max-width: 750px) {
     width: 100%;
     margin-bottom: ${props => (props.footer ? "15rem" : "4rem")};
   }
 
   .wrapper {
-    text-align: right;
     margin: 0 auto 0 auto;
-    @media (max-width: 750px) {
-      text-align: left;
-    }
   }
 
   div {

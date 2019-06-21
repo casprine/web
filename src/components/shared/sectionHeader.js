@@ -32,7 +32,7 @@ const StyledSectionHeader = styled.div`
     text-rendering: auto;
     text-transform: capitalize;
     margin-bottom: 0.5rem;
-    font-family: "maison";
+    font-family: "apercu";
 
     @media (max-width: 655px) {
       font-size: 30px;
@@ -44,7 +44,7 @@ const StyledSectionHeader = styled.div`
     line-height: 1.4;
     font-size: 1rem;
     color: ${grey};
-    font-family: "maison";
+    font-family: "apercu";
     @media (max-width: 655px) {
       font-size: 15px;
     }

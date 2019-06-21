@@ -10,7 +10,6 @@ const StyledHome = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   .wrapper {
     margin: 0 auto;
   }
@@ -26,7 +25,7 @@ const StyledHome = styled.div`
 const Index = () => (
   <Fragment>
     <Head>
-      <title>Casprine Assempah - Frontend Developer , Designer</title>
+      <title>Hi, I'm Casprine </title>
     </Head>
     <Layout>
       <Header />

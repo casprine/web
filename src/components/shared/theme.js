@@ -22,7 +22,7 @@ export const projectCard = theme("mode", {
 
 export const body = theme("mode", {
   false: "#E7EEF8",
-  true: "rgb(16, 34, 51)"
+  true: "rgb(16, 23, 30)"
 });
 
 export const footer = theme("mode", {

@@ -10,7 +10,7 @@ const ProjectCard = ({ name, stacks, about, github }) => {
         <StyledProject className="project">
           <div className="name">{name}</div>
           <div className="description">{about}</div>
-          <div className="stacks ">
+          <div className="stacks flex">
             {stacks.map((stack, i) => (
               <Stack name={stack} key={i} />
             ))}
@@ -45,11 +45,20 @@ const StyledProject = styled.div`
     padding: 0.8rem 1rem;
   }
 
+  .stacks {
+    outline: 1px solid red;
+    display: flex;
+
+    * {
+      outline: 1px solid red;
+    }
+  }
+
   .name {
     letter-spacing: -0.03em;
     line-height: 1.1;
     word-wrap: break-word;
-    font-family: "maison";
+    font-family: "apercu";
     font-size: 1.5rem;
   }
 

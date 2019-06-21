@@ -9,9 +9,11 @@ const GlobalStyles = createGlobalStyle`
   src: url("../static/fonts/inter.woff2") format("woff2-variations"),
        url("../static/fonts/inter.woff2") format("woff2");
 }
+ 
+
   @font-face {
-    font-family: 'maison';
-    src:  url('../static/fonts/maison.woff') format("woff");
+    font-family: 'apercu';
+    src:  url('../static/fonts/Apercu-Regular.woff2') format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: auto;
@@ -49,13 +51,6 @@ const GlobalStyles = createGlobalStyle`
     display:block;
   }
 }
- .stacks {
-    margin-top: auto;
-    font-size: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    color: white;
-  }
 
 hr{
   display: table-cell;
