@@ -3,8 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
    
   @font-face {
-    font-family: 'apercu', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: 'apercu';
     src:  url('../static/fonts/Apercu-Regular.woff2') format("woff2");
     font-weight: normal;
     font-style: normal;

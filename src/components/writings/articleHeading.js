@@ -24,13 +24,18 @@ const ArticleHeading = ({ title, date }) => {
 const StyledArticleHeading = styled.div`
 	color: ${white};
 	margin-bottom: 25px;
+	font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
+		"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+		"Helvetica Neue", sans-serif;
 	.title {
 		font-size: 40px;
 		letter-spacing: 0.2px;
 		line-height: 52px;
 		font-weight: 500;
 		margin: 0;
-
+		font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
+			"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+			"Helvetica Neue", sans-serif;
 		@media (max-width: 450px) {
 			font-size: 26px;
 		}
@@ -38,14 +43,12 @@ const StyledArticleHeading = styled.div`
 	.date {
 		margin-top: 3px;
 		color: ${grey};
-		font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
-			"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-			"Helvetica Neue", sans-serif;
+		/*font-family: "apercu";*/
 		border: 2px solid ${projectCard};
 		padding: 2px 8px;
-
 		display: inline-block;
 		border-radius: 3px;
+		font-size: 0.9rem;
 	}
 `;
 
