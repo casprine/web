@@ -25,11 +25,10 @@ const BlogPostLayout = ({ route, children }) => {
 
 	return (
 		<Fragment>
-			<SEO title={title}></SEO>
+			<SEO title={title} url={url}></SEO>
 			<StyledBlogPost>
 				<ArticleHeading title={title} date={date}></ArticleHeading>
 				{children}
-
 				<ShareIt url={url} title={title}></ShareIt>
 			</StyledBlogPost>
 		</Fragment>

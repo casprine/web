@@ -1,9 +1,8 @@
 import React, { Fragment } from "react";
-import Head from "next/head";
 import styled from "styled-components";
 
 // components
-import { Layout } from "../src/components/shared/index";
+import { SEO } from "../src/components/shared/index";
 import { LeftSide, RightSide } from "../src/components/home/index";
 
 const StyledHome = styled.div`
@@ -26,9 +25,7 @@ const StyledHome = styled.div`
 
 const Index = () => (
   <Fragment>
-    <Head>
-      <title>Hi, I'm Casprine </title>
-    </Head>
+    <SEO />
     <StyledHome>
       <LeftSide />
       <RightSide />

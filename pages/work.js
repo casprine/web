@@ -1,9 +1,8 @@
 import React, { Fragment } from "react";
-import Head from "next/head";
 import styled from "styled-components";
 
 // Components
-import { SectionHeader } from "../src/components/shared/index";
+import { SectionHeader, SEO } from "../src/components/shared/index";
 import ProjectCard from "../src/components/work/projectCard";
 
 // Data
@@ -20,10 +19,7 @@ const StyledWorkWrapper = styled.div`
 
 const Work = () => (
   <Fragment>
-    <Head>
-      <title> Casprine Assempah - Projects</title>
-    </Head>
-
+    <SEO></SEO>
     <SectionHeader />
     <ContextConsumer>
       {({ footer }) => (

@@ -3,7 +3,7 @@ import Head from "next/head";
 import styled from "styled-components";
 
 // Components
-import { Header, SectionHeader } from "../../src/components/shared/index";
+import { Header, SectionHeader, SEO } from "../../src/components/shared/index";
 
 // Data
 import { Article } from "../../src/components/writings/index";
@@ -16,9 +16,10 @@ const Writings = () => {
 
   return (
     <Fragment>
-      <Head>
-        <title>Casprine's Writings</title>
-      </Head>
+      <SEO
+        title="Casprine's writings"
+        description="Experiments on CSS, React, Javascript and Design"
+      />
       <StyledWrtings>
         {writings.map((article, i) => {
           return <Article {...article} key={i} />;

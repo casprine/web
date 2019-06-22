@@ -75,7 +75,6 @@ const Icon = styled.span`
 
 const StyledShareIt = styled.div`
   margin: 70px 0 !important;
-  outline: 1px solid red;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
