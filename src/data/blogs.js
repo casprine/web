@@ -1,4 +1,4 @@
-export const blogPosts = [
+export const writings = [
   {
     title: "React Suspense, Memo & Hooks",
     slug: "react-suspense"

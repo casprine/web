@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 
 // Theme
-import { grey, projectCard, borders } from "../shared/theme";
+import { grey, projectCard, borders, white } from "../shared/theme";
 
 const Article = ({ title, description, slug }) => {
 	return (
@@ -31,6 +31,7 @@ const StyledArticle = styled.a`
 		border-bottom: 2px solid ${borders};
 		transition: all 0.25s;
 		display: inline-block;
+		color: ${white};
 		&:hover {
 			border-bottom: 2px solid ${projectCard};
 		}

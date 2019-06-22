@@ -1,9 +1,15 @@
 import React, { Fragment } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import Link from "next/link";
+
+// Component
 import ThemeChanger from "./themeChanger";
-import { footer, footerText, white } from "./theme";
 import Logo from "./logo";
+
+// Theme
+import { footer, footerText, white } from "./theme";
+
+// Context
 import { ContextConsumer } from "../../context/index";
 
 const Header = () => (

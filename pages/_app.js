@@ -30,7 +30,6 @@ class MyApp extends App {
 export default MyApp;
 
 Router.onRouteChangeStart = () => {
-  console.log("I am about to route");
   NProgress.start();
 };
 

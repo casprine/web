@@ -10,14 +10,14 @@ import { ContextConsumer } from "../../context/index";
 
 // Data
 import { projects } from "../../data/projects";
-import { blogPosts } from "../../data/blogs";
+import { writings } from "../../data/blogs";
 
 // Components
 import { Article } from "../writings/index";
 
 const RightSide = () => {
   const projs = projects.slice(0, 3);
-  const blogs = blogPosts.slice(0, 3);
+  const blogs = writings.slice(0, 3);
 
   return (
     <Fragment>
