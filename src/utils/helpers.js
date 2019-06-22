@@ -14,16 +14,13 @@ export function day() {
 	return "false";
 }
 
-export function formatPostDate(date, lang) {
-	if (typeof Date.prototype.toLocaleDateString !== "function") {
-		return date;
-	}
-
+export function formatPostDate(date, lang = "en-US") {
 	date = new Date(date);
 	const args = [
 		lang,
 		{ day: "numeric", month: "long", year: "numeric" }
 	].filter(Boolean);
+
 	return date.toLocaleDateString(...args);
 }
 

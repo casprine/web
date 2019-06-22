@@ -40,7 +40,9 @@ const Layout = withRouter(({ children, router }) => (
                   className={!footer ? "children" : "children overflow"}
                 >
                   <Header />
-                  <BlogPostLayout route={router}>{children}</BlogPostLayout>
+                  <BlogPostLayout route={router.route}>
+                    {children}
+                  </BlogPostLayout>
                 </div>
               </StyledLayout>
             </ThemeProvider>

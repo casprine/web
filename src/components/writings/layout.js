@@ -5,11 +5,28 @@ import Head from "next/head";
 // Theme
 import { grey, white } from "../shared/theme";
 
+// components
+import ArticleHeading from "./articleHeading";
+
+// helpers
+import me from "../../../config";
+import { sortedWritings } from "../../utils/helpers";
+
+// Data
+import writings from "../../data/writings.json";
+
 const BlogPostLayout = ({ route, children }) => {
-	console.log(route);
+	const slug = route.substring(10);
+	const url = `${me.url}/writings/${slug}`;
+
+	const { title, date } = writings[slug];
+
 	return (
 		<Fragment>
-			<StyledBlogPost>{children}</StyledBlogPost>
+			<StyledBlogPost>
+				<ArticleHeading title={title} date={date}></ArticleHeading>
+				{children}
+			</StyledBlogPost>
 		</Fragment>
 	);
 };
