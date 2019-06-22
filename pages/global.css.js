@@ -3,14 +3,13 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
    
   @font-face {
-    font-family: 'apercu';
+    font-family: 'apercu', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     src:  url('../static/fonts/Apercu-Regular.woff2') format("woff2");
     font-weight: normal;
     font-style: normal;
-    font-display: auto;
+    font-display: swap;
   }
-
-
 
   body {
     -webkit-font-smoothing: antialiased;
@@ -51,7 +50,7 @@ a {
 
   
 
-.grid-3 {
+.grid-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -61,38 +60,31 @@ a {
   flex-wrap: wrap;
 }
 
-
-.grid-3 > * {
-  width: -webkit-calc(33.33% - 2 * 40px/3);
-  width: calc(33.33% - 2 * 40px / 3);
-  margin: 20px 0;
-}
-.grid-3 > *:nth-child(3n + 2) {
-  margin-left: 40px;
-  margin-right: 40px;
-}
-
-@media only screen and (max-width: 1420px) {
-  .grid-3 > * {
-    width: -webkit-calc(50% - 40px/2);
-    width: calc(50% - 40px / 2);
   }
-  .grid-3 > *:nth-child(3n + 2) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .grid-3 > *:nth-child(2n + 1) {
-    margin-right: 40px;
-  }
-}
-@media only screen and (max-width: 740px) {
-  .grid-3 > * {
-    width: 100%;
-  }
-  .grid-3 > *:nth-child(2n + 1) {
-    margin-right: auto;
-  }
-}
+      .grid-2 > * {
+        width: -webkit-calc(50% - 40px/2);
+        width: calc(50% - 40px / 2);
+      }
+      .grid-2 > *:nth-child(2n + 1) {
+        margin-right: 40px;
+        margin-top: 20px;
+      }
+      @media only screen and (max-width: 1070px) {
+        .block--related .grid-2 > * {
+          width: 100%;
+        }
+        .block--related .grid-2 > *:nth-child(2n + 1) {
+          margin-right: auto;
+        }
+      }
+      @media only screen and (max-width: 860px) {
+        .grid-2 > * {
+          width: 100%;
+        }
+        .grid-2 > *:nth-child(2n + 1) {
+          margin-right: auto;
+        }
+      }
 .pointer {
   cursor:pointer;
 }

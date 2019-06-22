@@ -1,20 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-import { projectCard } from "./theme";
+
+// theme
+import { projectCard, white } from "./theme";
 
 const Stack = ({ name }) => <StyledStack>{name}</StyledStack>;
 
 const StyledStack = styled.div`
-  margin-right: 10px;
-  display: inline-block;
   font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
+  margin-right: 10px;
+  display: inline-block;
+  font-size: 0.9rem;
   margin-bottom: 5px;
-  background: ${projectCard};
-  padding: 0.2rem 0.3rem !important;
+  border: 2px solid ${projectCard};
+  padding: 2px 8px;
   border-radius: 2px;
-  color: white;
+  color: ${white};
   text-transform: lowercase;
 
   &:first-child {

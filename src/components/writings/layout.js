@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import styled, { ThemeProvider } from "styled-components";
+import { MDXProvider } from "@mdx-js/react";
 import Head from "next/head";
 
 // Theme

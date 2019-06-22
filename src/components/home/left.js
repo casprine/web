@@ -48,11 +48,6 @@ const LeftSide = () => {
 
 const StyledLeftSide = styled.div`
   color: ${white};
-  width: 70%;
-
-  @media (max-width: 750px) {
-    width: 100%;
-  }
 
   .mb {
     margin: 20px 0;

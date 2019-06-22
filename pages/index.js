@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 
 // components
-import { SEO } from "../src/components/shared/index";
+import { SEO, Container } from "../src/components/shared/index";
 import { LeftSide, RightSide } from "../src/components/home/index";
 
 const StyledHome = styled.div`
@@ -16,7 +16,6 @@ const StyledHome = styled.div`
   }
   @media (max-width: 750px) {
     flex-wrap: wrap;
-
     .wrapper {
       width: 100%;
     }
@@ -26,10 +25,12 @@ const StyledHome = styled.div`
 const Index = () => (
   <Fragment>
     <SEO />
-    <StyledHome>
-      <LeftSide />
-      <RightSide />
-    </StyledHome>
+    <Container>
+      <StyledHome>
+        <LeftSide />
+        <RightSide />
+      </StyledHome>
+    </Container>
   </Fragment>
 );
 

@@ -42,8 +42,9 @@ const StyledArticleHeading = styled.div`
 			"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
 			"Helvetica Neue", sans-serif;
 		border: 2px solid ${projectCard};
-		display: inline-block;
 		padding: 2px 8px;
+
+		display: inline-block;
 		border-radius: 3px;
 	}
 `;
