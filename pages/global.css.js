@@ -26,6 +26,12 @@ font-feature-settings: "calt", "kern", "liga";
   height: inherit;
 }
 
+
+
+pre , code {
+  font-family:"Monaco" ,system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important; 
+}
 .center{
   display:flex;
 
@@ -162,8 +168,6 @@ a {
           transform: rotate(360deg)
       }
   }
-
-
 
 
 `;

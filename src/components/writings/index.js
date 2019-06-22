@@ -1,3 +1,4 @@
 import Article from "./article";
 import BlogPostLayout from "./layout";
-export { Article, BlogPostLayout };
+import Code from "./syntaxHighlighter";
+export { Article, BlogPostLayout, Code };

@@ -10,6 +10,7 @@ import { grey, white } from "../shared/theme";
 import ArticleHeading from "./articleHeading";
 import { SEO } from "../shared";
 import ShareIt from "./share";
+import Code from "./syntaxHighlighter";
 
 // helpers
 import me from "../../../config";
@@ -26,15 +27,40 @@ const BlogPostLayout = ({ route, children }) => {
 
 	return (
 		<Fragment>
-			<SEO title={title} url={url} />
-			<StyledBlogPost>
-				<ArticleHeading title={title} date={date} />
-				{children}
-				<ShareIt url={url} title={title} />
-			</StyledBlogPost>
+			<MDXProvider
+				components={{
+					code: StyledCode,
+					inlineCode: InlineCode
+				}}
+			>
+				<SEO title={title} url={url} />
+				<StyledBlogPost>
+					<ArticleHeading title={title} date={date} />
+					{children}
+					<ShareIt url={url} title={title} />
+				</StyledBlogPost>
+			</MDXProvider>
 		</Fragment>
 	);
 };
+
+const StyledCode = styled(Code)`
+	* {
+		outline: 1px solid red !important;
+	}
+`;
+
+const InlineCode = styled.code`
+	padding-left: 1px;
+	padding-right: 1px;
+	display: inline-block;
+	line-height: 1.45;
+	font-family: "Monaco", monospace;
+
+	color: #444;
+	border-radius: 2px;
+	background: #f4f4f6;
+`;
 
 const StyledBlogPost = styled.div`
 	width: 90%;
