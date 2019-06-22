@@ -1,9 +1,15 @@
 import React, { Fragment } from "react";
 import Head from "next/head";
 import styled from "styled-components";
-import { Layout, Header, SectionHeader } from "../src/components/shared/index";
+
+// Components
+import { SectionHeader } from "../src/components/shared/index";
 import ProjectCard from "../src/components/work/projectCard";
+
+// Data
 import { projects } from "../src/data/projects";
+
+// Context
 import { ContextConsumer } from "../src/context/";
 
 const StyledWorkWrapper = styled.div`
@@ -18,19 +24,16 @@ const Work = () => (
       <title> Casprine Assempah - Projects</title>
     </Head>
 
-    <Layout>
-      <Header />
-      <SectionHeader />
-      <ContextConsumer>
-        {({ footer }) => (
-          <StyledWorkWrapper className="grid-3" footer={footer}>
-            {projects.map((project, i) => (
-              <ProjectCard key={i} {...project} />
-            ))}
-          </StyledWorkWrapper>
-        )}
-      </ContextConsumer>
-    </Layout>
+    <SectionHeader />
+    <ContextConsumer>
+      {({ footer }) => (
+        <StyledWorkWrapper className="grid-3" footer={footer}>
+          {projects.map((project, i) => (
+            <ProjectCard key={i} {...project} />
+          ))}
+        </StyledWorkWrapper>
+      )}
+    </ContextConsumer>
   </Fragment>
 );
 

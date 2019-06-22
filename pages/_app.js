@@ -10,6 +10,9 @@ import { ContextProvider } from "../src/context/index.js";
 // GlobalStylyes
 import GlobalStyle from "./global.css";
 
+// LayoutRender
+import { SectionHeader, Layout } from "../src/components/shared/";
+
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
@@ -20,7 +23,9 @@ class MyApp extends App {
         </Head>
         <GlobalStyle />
         <ContextProvider value="dark">
-          <Component {...pageProps} />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
         </ContextProvider>
       </Container>
     );

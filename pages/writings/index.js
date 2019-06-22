@@ -3,11 +3,7 @@ import Head from "next/head";
 import styled from "styled-components";
 
 // Components
-import {
-  Layout,
-  Header,
-  SectionHeader
-} from "../../src/components/shared/index";
+import { Header, SectionHeader } from "../../src/components/shared/index";
 
 // Data
 import { writings } from "../../src/data/blogs";
@@ -19,15 +15,11 @@ const Writings = () => {
       <Head>
         <title>Casprine's Writings</title>
       </Head>
-      <Layout>
-        <Header />
-
-        <StyledWrtings>
-          {writings.map((article, i) => {
-            return <Article {...article} key={i} />;
-          })}
-        </StyledWrtings>
-      </Layout>
+      <StyledWrtings>
+        {writings.map((article, i) => {
+          return <Article {...article} key={i} />;
+        })}
+      </StyledWrtings>
     </Fragment>
   );
 };

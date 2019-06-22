@@ -3,7 +3,9 @@ import { day } from "../utils/helpers";
 
 const ContextContext = React.createContext();
 
-class ContextProvider extends Component {
+import { withRouter } from "next/router";
+
+class Provider extends Component {
   state = {
     dark: !day(),
     footer: false
@@ -23,6 +25,7 @@ class ContextProvider extends Component {
 
   render() {
     const { dark, footer } = this.state;
+    const router = this.props.router;
     return (
       <Fragment>
         <ContextContext.Provider
@@ -30,7 +33,8 @@ class ContextProvider extends Component {
             theme: dark,
             footer: footer,
             toggleTheme: this.switchTheme,
-            toggleFooter: this.toggleFooter
+            toggleFooter: this.toggleFooter,
+            router: router
           }}
         >
           {this.props.children}
@@ -41,5 +45,5 @@ class ContextProvider extends Component {
 }
 
 const ContextConsumer = ContextContext.Consumer;
-
+const ContextProvider = withRouter(Provider);
 export { ContextConsumer, ContextProvider };

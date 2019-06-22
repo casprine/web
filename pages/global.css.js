@@ -11,15 +11,18 @@ const GlobalStyles = createGlobalStyle`
   }
 
 
+
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     scroll-behavior: smooth;
-   font-variation-settings: "slnt" 0deg;  
+font-feature-settings: "calt", "kern", "liga";
     margin:0;
     padding:0;
+    -moz-osx-font-smoothing: grayscale;
+
   }
 #__next{
   height: inherit;

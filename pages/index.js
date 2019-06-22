@@ -3,7 +3,7 @@ import Head from "next/head";
 import styled from "styled-components";
 
 // components
-import { Layout, Header } from "../src/components/shared/index";
+import { Layout } from "../src/components/shared/index";
 import { LeftSide, RightSide } from "../src/components/home/index";
 
 const StyledHome = styled.div`
@@ -29,13 +29,10 @@ const Index = () => (
     <Head>
       <title>Hi, I'm Casprine </title>
     </Head>
-    <Layout>
-      <Header />
-      <StyledHome>
-        <LeftSide />
-        <RightSide />
-      </StyledHome>
-    </Layout>
+    <StyledHome>
+      <LeftSide />
+      <RightSide />
+    </StyledHome>
   </Fragment>
 );
 
