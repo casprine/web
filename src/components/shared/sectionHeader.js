@@ -32,7 +32,9 @@ const StyledSectionHeader = styled.div`
     text-rendering: auto;
     text-transform: capitalize;
     margin-bottom: 0.5rem;
-    font-family: "apercu";
+    font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
 
     @media (max-width: 655px) {
       font-size: 30px;

@@ -25,7 +25,9 @@ const Article = ({ title, description, slug }) => {
 
 const StyledArticle = styled.a`
 	.title {
-		font-family: "apercu";
+		font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
+			"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+			"Helvetica Neue", sans-serif;
 		font-size: 20px;
 		margin-top: 25px;
 		border-bottom: 2px solid ${borders};
@@ -42,9 +44,9 @@ const StyledArticle = styled.a`
 		margin: 5px 0;
 		line-height: 28px;
 		font-size: 16px;
-		font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-			Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-			Segoe UI Symbol;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+			Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+			sans-serif;
 	}
 `;
 

@@ -49,7 +49,9 @@ const StyledProject = styled.div`
   .name {
     letter-spacing: -0.03em;
     line-height: 1.1;
-    font-family: "apercu";
+    font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
     font-size: 1.5rem;
   }
 

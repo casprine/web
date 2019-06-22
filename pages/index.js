@@ -16,7 +16,7 @@ const StyledHome = styled.div`
     margin: 0 auto;
   }
   @media (max-width: 750px) {
-    flex-wrap: PLFwrap;
+    flex-wrap: wrap;
 
     .wrapper {
       width: 100%;

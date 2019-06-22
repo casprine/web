@@ -140,7 +140,9 @@ const StyledHeader = styled.div`
     span {
       padding: 0 8px;
       position: relative;
-      font-family: "apercu";
+      font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
       text-transform: uppercase;
       :hover {
         font-style: italic;
@@ -208,7 +210,9 @@ const StyledBottomNav = styled.header`
       text-align: center;
       text-transform: uppercase;
       padding: 16px 30px;
-      font-family: "inter";
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
     }
   }
   .social {

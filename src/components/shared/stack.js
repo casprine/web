@@ -7,7 +7,9 @@ const Stack = ({ name }) => <StyledStack>{name}</StyledStack>;
 const StyledStack = styled.div`
   margin-right: 10px;
   display: inline-block;
-  font-family: "apercu";
+  font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   margin-bottom: 5px;
   background: ${projectCard};
   padding: 0.2rem 0.3rem !important;

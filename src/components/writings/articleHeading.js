@@ -8,7 +8,7 @@ import { formatPostDate } from "../../utils/helpers";
 import { ContextConsumer } from "../../context";
 
 // Theme
-import { white } from "../shared/theme";
+import { white, grey } from "../shared/theme";
 
 const ArticleHeading = ({ title, date }) => {
 	return (
@@ -24,9 +24,7 @@ const ArticleHeading = ({ title, date }) => {
 const StyledArticleHeading = styled.div`
 	color: ${white};
 	margin-bottom: 10px;
-	* {
-		outline: 1px solid red;
-	}
+
 	.title {
 		font-size: 40px;
 		letter-spacing: 0.2px;
@@ -40,6 +38,10 @@ const StyledArticleHeading = styled.div`
 	}
 	.date {
 		margin-top: 3px;
+		color: ${grey};
+		font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
+			"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+			"Helvetica Neue", sans-serif;
 	}
 `;
 

@@ -1,7 +1,8 @@
 import React from "react";
 import Head from "next/head";
 
-const url = "https://casprine.netlify.com/";
+// helpers
+import me from "../../../config.js";
 
 const SEO = ({ title, description, issue }) => {
   return (
@@ -9,14 +10,14 @@ const SEO = ({ title, description, issue }) => {
       <title>{title}</title>
       <link
         rel="shortcut icon"
-        href="../../../static/images/circle-dark.png"
+        href={me.url + "/static/images/circle-dark.png"}
         type="image/png"
       />
       <meta name="title" content={title} />
       <meta name="description" content={description} />
 
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={url + issue} />
+      <meta property="og:url" content={me.url + issue} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta
@@ -30,7 +31,7 @@ const SEO = ({ title, description, issue }) => {
       <meta name="twitter:description" content={description} />
       <meta
         name="twitter:image"
-        content="../../../static/images/circle-dark.png"
+        href={me.url + "/static/images/circle-dark.png"}
       />
     </Head>
   );

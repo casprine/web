@@ -65,20 +65,18 @@ const StyledLeftSide = styled.div`
     color: ${white};
     text-rendering: auto;
     margin-bottom: 0.5rem;
-    font-family: "apercu";
+    font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
   }
 
   .description {
     line-height: 28px;
     font-size: 18px;
     color: ${grey};
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
-      Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   }
 
   .text {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
-      Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     color: ${white};
     font-size: 17px;
     margin-right: 5px;

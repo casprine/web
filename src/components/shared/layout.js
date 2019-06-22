@@ -72,12 +72,6 @@ const StyledLayout = styled.div`
   height: 100%;
   background: ${body};
 
-  .shit {
-    outline: 1px solid red;
-    * {
-      outline: 1px solid red;
-    }
-  }
   .children {
     width: 70vw;
 

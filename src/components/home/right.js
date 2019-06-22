@@ -92,13 +92,17 @@ const StyledRightSide = styled.div`
 `;
 
 const StyledHeading = styled.div`
-  font-family: "apercu";
+  font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   color: ${white};
   font-size: 2rem;
 `;
 
 const StyledProjects = styled.div`
-  font-family: "apercu";
+  font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   font-size: 18px;
   margin-top: 30px;
 `;
