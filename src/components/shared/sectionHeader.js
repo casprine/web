@@ -6,7 +6,7 @@ const SectionHeader = () => {
   return (
     <Fragment>
       <StyledSectionHeader className="section">
-        <div className="about"> Native. web. Open Source</div>
+        <div className="title"> Native. web. Open Source</div>
         <div className="description">
           Projects I have worked ranging from mobile apps , design works to web
           applications.
@@ -23,7 +23,7 @@ const StyledSectionHeader = styled.div`
     margin-top: 20px;
   }
 
-  .about {
+  .title {
     letter-spacing: -0.03em;
     line-height: 1.1;
     word-wrap: break-word;

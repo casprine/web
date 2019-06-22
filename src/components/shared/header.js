@@ -19,7 +19,7 @@ const Header = () => (
 
               <div className="links">
                 <Link href="/work" prefetch>
-                  <span>Works</span>
+                  <span>Work</span>
                 </Link>
                 <Link href="/writings" prefetch>
                   <span>Writings</span>
@@ -47,12 +47,6 @@ const Header = () => (
                 <div className="link">
                   <Link href="/work">
                     <span className="">Work</span>
-                  </Link>
-                </div>
-
-                <div className="link">
-                  <Link href="/design">
-                    <span>Design</span>
                   </Link>
                 </div>
 

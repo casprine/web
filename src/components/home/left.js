@@ -1,9 +1,16 @@
 import React, { Fragment } from "react";
 import styled, { ThemeProvider } from "styled-components";
 
+// Context
 import { ContextConsumer } from "../../context/index";
+
+// Data
 import { stack, social } from "../../data/stack";
+
+// Component
 import { Stack } from "../shared";
+
+// Theme
 import { white, grey } from "../shared/theme";
 
 const LeftSide = () => {
@@ -64,6 +71,7 @@ const StyledLeftSide = styled.div`
   .description {
     line-height: 28px;
     font-size: 18px;
+    color: ${grey};
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
       Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   }

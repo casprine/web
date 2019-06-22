@@ -1,16 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-
- @font-face {
-  font-family: 'inter';
-  font-weight: 100 900;
-  font-style: oblique 0deg 10deg;
-  src: url("../static/fonts/inter.woff2") format("woff2-variations"),
-       url("../static/fonts/inter.woff2") format("woff2");
-}
- 
-
+   
   @font-face {
     font-family: 'apercu';
     src:  url('../static/fonts/Apercu-Regular.woff2') format("woff2");
@@ -18,7 +9,6 @@ const GlobalStyles = createGlobalStyle`
     font-style: normal;
     font-display: auto;
   }
-
 
 
   body {
@@ -31,15 +21,6 @@ const GlobalStyles = createGlobalStyle`
     margin:0;
     padding:0;
   }
-
- * {
-    font-variation-settings: "slnt" 10deg;
-
-   }
-  .italic { 
-    font-variation-settings: "slnt" 10deg;
-  }
-
 #__next{
   height: inherit;
 }

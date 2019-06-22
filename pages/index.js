@@ -1,15 +1,17 @@
 import React, { Fragment } from "react";
 import Head from "next/head";
-import { Layout, Header } from "../src/components/shared/index";
-import { LeftSide, RightSide } from "../src/components/home/index";
 import styled from "styled-components";
 
+// components
+import { Layout, Header } from "../src/components/shared/index";
+import { LeftSide, RightSide } from "../src/components/home/index";
+
 const StyledHome = styled.div`
-  outline: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   .wrapper {
     margin: 0 auto;
   }

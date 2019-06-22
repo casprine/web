@@ -27,27 +27,32 @@ const RightSide = () => {
             <StyledRightSide footer={footer}>
               <div className="wrapper mb">
                 <StyledProjects className="projects">
-                  <span>built</span>
+                  <span>made</span>
                   {projs.map((proj, i) => {
                     return (
-                      <StyledLink href={proj.link} key={i}>
+                      <StyledLink href={proj.link} key={i} className="mlr">
                         {proj.name}
                       </StyledLink>
                     );
                   })}
                   <span>
                     and a some other stuff{" "}
-                    <StyledLink href="/works">here</StyledLink>
+                    <Link prefetch passHref href="/work">
+                      <StyledLink className="mlr">here</StyledLink>
+                    </Link>
                   </span>
                 </StyledProjects>
 
-                <div className="blog mb">
+                <div className="mb">
                   <StyledHeading>Writings</StyledHeading>
                   <div className="posts">
                     {blogs.map((article, i) => {
                       return <Article {...article} key={i} />;
                     })}
                   </div>
+                  <Link prefetch passHref href="/writings">
+                    <StyledLink className="read-more">Read More</StyledLink>
+                  </Link>
                 </div>
               </div>
             </StyledRightSide>
@@ -70,12 +75,23 @@ const StyledRightSide = styled.div`
   .mb {
     margin: 40px 0;
   }
+
+  .mlr {
+    margin: 0 0.2rem !important;
+    color: ${grey};
+  }
+
+  .read-more {
+    text-transform: capitalize !important;
+    margin: 10px 0;
+    color: ${projectCard};
+  }
 `;
 
 const StyledHeading = styled.div`
   font-family: "apercu";
   color: ${white};
-  font-size: 1.5rem;
+  font-size: 2rem;
 `;
 
 const StyledProjects = styled.div`
@@ -98,7 +114,6 @@ const StyledBlogPost = styled.article`
 const StyledLink = styled.a`
   text-transform: lowercase;
   color: ${grey};
-  margin: 0 0.2rem !important;
   display: inline-block;
   color: inherit;
   border-bottom: 2px solid ${borders};

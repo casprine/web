@@ -16,7 +16,7 @@ const Article = ({ title, description, slug }) => {
 						application code because you can't really add debugger
 						or console.log in your code to find out what's
 						happening. It's a black box - config in, bundle out.
-					</div>{" "}
+					</div>
 				</StyledArticle>
 			</Link>
 		</Fragment>
@@ -39,6 +39,11 @@ const StyledArticle = styled.a`
 	.description {
 		color: ${grey};
 		margin: 5px 0;
+		line-height: 28px;
+		font-size: 16px;
+		font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+			Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+			Segoe UI Symbol;
 	}
 `;
 
