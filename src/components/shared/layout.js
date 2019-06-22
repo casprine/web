@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import Head from "next/head";
+import { withRouter } from "next/router";
 
 // Context
 import { ContextConsumer } from "../../context/index";
@@ -10,7 +11,7 @@ import { body, grey, white } from "./theme";
 
 // Components
 import Header from "./header";
-
+import { BlogPostLayout } from "../writings";
 const layoutStyles = {
   wrapper: {
     minHeight: "100vh",
@@ -22,14 +23,14 @@ const layoutStyles = {
   }
 };
 
-const Layout = ({ children }) => (
+const Layout = withRouter(({ children, router }) => (
   <Fragment>
     <Head>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
 
     <ContextConsumer>
-      {({ theme, footer, router }) => {
+      {({ theme, footer }) => {
         if (router.route.length > 10) {
           return (
             <ThemeProvider theme={{ mode: theme }}>
@@ -39,7 +40,7 @@ const Layout = ({ children }) => (
                   className={!footer ? "children" : "children overflow"}
                 >
                   <Header />
-                  <StyledBlogPost>{children}</StyledBlogPost>
+                  <BlogPostLayout route={router}>{children}</BlogPostLayout>
                 </div>
               </StyledLayout>
             </ThemeProvider>
@@ -62,7 +63,7 @@ const Layout = ({ children }) => (
       }}
     </ContextConsumer>
   </Fragment>
-);
+));
 
 const StyledLayout = styled.div`
   background: ${body};
@@ -84,35 +85,6 @@ const StyledLayout = styled.div`
     @media (max-width: 750px) {
       width: 90%;
     }
-  }
-`;
-
-const StyledBlogPost = styled.div`
-  width: 70%;
-  margin: 0 auto;
-  outline: 1px solid red;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  strong .h {
-    font-family: "apercu";
-    font-weight: 100 !important;
-    font-size: 2rem;
-    color: ${white};
-  }
-
-  p {
-    color: ${grey};
-    line-height: 28px;
-    font-size: 16px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-      Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
-  }
-  * {
   }
 `;
 

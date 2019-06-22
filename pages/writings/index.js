@@ -6,10 +6,14 @@ import styled from "styled-components";
 import { Header, SectionHeader } from "../../src/components/shared/index";
 
 // Data
-import { writings } from "../../src/data/blogs";
 import { Article } from "../../src/components/writings/index";
 
+// helpers
+import { sortedWritings } from "../../src/utils/helpers";
+
 const Writings = () => {
+  const writings = sortedWritings();
+
   return (
     <Fragment>
       <Head>

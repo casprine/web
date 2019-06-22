@@ -10,14 +10,17 @@ import { ContextConsumer } from "../../context/index";
 
 // Data
 import { projects } from "../../data/projects";
-import { writings } from "../../data/blogs";
 
 // Components
 import { Article } from "../writings/index";
 
+// helpers
+import { sortedWritings } from "../../utils/helpers";
+
 const RightSide = () => {
+  const writings = sortedWritings();
+  const latestPosts = writings.slice(0, 3);
   const projs = projects.slice(0, 3);
-  const blogs = writings.slice(0, 3);
 
   return (
     <Fragment>
@@ -46,7 +49,7 @@ const RightSide = () => {
                 <div className="mb">
                   <StyledHeading>Writings</StyledHeading>
                   <div className="posts">
-                    {blogs.map((article, i) => {
+                    {latestPosts.map((article, i) => {
                       return <Article {...article} key={i} />;
                     })}
                   </div>

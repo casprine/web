@@ -1,3 +1,3 @@
 import Article from "./article";
-import ArticleHeading from "./articleHeading";
-export { Article, ArticleHeading };
+import BlogPostLayout from "./layout";
+export { Article, BlogPostLayout };

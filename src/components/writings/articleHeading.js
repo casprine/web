@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-
+import { formatPostDate } from "../../utils/helpers";
 // Context
 import { ContextConsumer } from "../../context";
 // Theme
@@ -12,8 +12,7 @@ const ArticleHeading = ({ title = "shit", date = "okat" }) => {
 			<StyledArticleHeading>
 				<h1 className="book title"> {title}</h1>
 				<div className="meta flex" style={{ marginTop: "20px" }}>
-					<div className="bullet">•</div>
-					<div className="date">{date}</div>
+					<div className="date">{formatPostDate(date)}</div>
 				</div>
 			</StyledArticleHeading>
 		</Fragment>
@@ -23,16 +22,6 @@ const ArticleHeading = ({ title = "shit", date = "okat" }) => {
 const StyledArticleHeading = styled.div`
 	.title {
 		color: ${white};
-	}
-	.date {
-		margin-top: 3px;
-	}
-
-	.bullet {
-		margin: auto 10px;
-	}
-
-	h1 {
 		font-size: 40px;
 		letter-spacing: 0.2px;
 		line-height: 52px;
@@ -42,6 +31,9 @@ const StyledArticleHeading = styled.div`
 		@media (max-width: 450px) {
 			font-size: 26px;
 		}
+	}
+	.date {
+		margin-top: 3px;
 	}
 `;
 
