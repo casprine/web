@@ -1,3 +1,3 @@
 import Article from "./article";
-
-export { Article };
+import ArticleHeading from "./articleHeading";
+export { Article, ArticleHeading };

@@ -39,7 +39,6 @@ const Layout = ({ children }) => (
                   className={!footer ? "children" : "children overflow"}
                 >
                   <Header />
-
                   <StyledBlogPost>{children}</StyledBlogPost>
                 </div>
               </StyledLayout>
