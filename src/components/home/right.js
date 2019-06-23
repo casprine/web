@@ -39,7 +39,7 @@ const RightSide = () => {
                     );
                   })}
                   <span>
-                    and a some other stuff{" "}
+                    and some other stuff{" "}
                     <Link prefetch passHref href="/work">
                       <StyledLink className="mlr">here</StyledLink>
                     </Link>

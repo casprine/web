@@ -3,7 +3,12 @@ import Head from "next/head";
 import styled from "styled-components";
 
 // Components
-import { Header, SectionHeader, SEO } from "../../src/components/shared/index";
+import {
+  Header,
+  SectionHeader,
+  SEO,
+  Container
+} from "../../src/components/shared/index";
 
 // Data
 import { Article } from "../../src/components/writings/index";
@@ -20,18 +25,14 @@ const Writings = () => {
         title="Casprine's writings"
         description="Experiments on CSS, React, Javascript and Design"
       />
-      <StyledWrtings>
+
+      <Container>
         {writings.map((article, i) => {
           return <Article {...article} key={i} />;
         })}
-      </StyledWrtings>
+      </Container>
     </Fragment>
   );
 };
-
-const StyledWrtings = styled.div`
-  width: 70%;
-  margin: 0 auto;
-`;
 
 export default Writings;

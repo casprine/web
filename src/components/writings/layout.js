@@ -29,7 +29,7 @@ const BlogPostLayout = ({ route, children }) => {
 		<Fragment>
 			<MDXProvider
 				components={{
-					code: StyledCode,
+					code: Code,
 					inlineCode: InlineCode
 				}}
 			>
@@ -43,12 +43,6 @@ const BlogPostLayout = ({ route, children }) => {
 		</Fragment>
 	);
 };
-
-const StyledCode = styled(Code)`
-	* {
-		outline: 1px solid red !important;
-	}
-`;
 
 const InlineCode = styled.code`
 	padding-left: 1px;
@@ -65,6 +59,12 @@ const InlineCode = styled.code`
 const StyledBlogPost = styled.div`
 	width: 90%;
 	margin: 0 auto;
+
+	@media (max-width: 750px) {
+		width: 95%;
+		margin-top: 15px;
+		margin-bottom: 100px;
+	}
 
 	h1,
 	h2,

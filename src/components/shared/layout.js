@@ -78,8 +78,12 @@ const StyledLayout = styled.div`
     @media (max-width: 1307px) and (min-width: 749px) {
       padding: 0 1rem;
     }
+
+    @media (max-width: 1120px) {
+      width: 90vw;
+    }
     @media (max-width: 750px) {
-      width: 90%;
+      width: 100vw;
     }
   }
 `;

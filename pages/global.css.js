@@ -10,11 +10,24 @@ const GlobalStyles = createGlobalStyle`
     font-display: swap;
   }
 
+
+@font-face {
+    font-family: 'monaco-regular';
+    src:  url('../static/fonts/Monaco.woff2') format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+
+
+
+
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
     scroll-behavior: smooth;
 font-feature-settings: "calt", "kern", "liga";
     margin:0;
@@ -29,7 +42,7 @@ font-feature-settings: "calt", "kern", "liga";
 
 
 pre , code {
-  font-family:"Monaco" ,system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  font-family:"monaco-regular" ,system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important; 
 }
 .center{

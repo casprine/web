@@ -15,6 +15,12 @@ const StyledContainer = styled.div`
 
 	@media (max-width: 750px) {
 		width: 100%;
+		margin-top: 15px 0 !important;
+		margin-bottom: 100px;
+	}
+
+	@media (max-width: 1120px) {
+		width: 90%;
 	}
 `;
 

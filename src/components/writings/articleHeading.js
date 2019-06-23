@@ -30,7 +30,6 @@ const StyledArticleHeading = styled.div`
 	.title {
 		font-size: 40px;
 		letter-spacing: 0.2px;
-		line-height: 52px;
 		font-weight: 500;
 		margin: 0;
 		font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,

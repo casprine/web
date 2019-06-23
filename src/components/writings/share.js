@@ -87,6 +87,10 @@ const StyledShareIt = styled.div`
       "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
       "Helvetica Neue", sans-serif;
     text-align: center;
+
+    @media (max-width: 750px) {
+      font-size: 1rem;
+    }
   }
 `;
 

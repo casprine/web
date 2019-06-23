@@ -63,12 +63,23 @@ const StyledLeftSide = styled.div`
     font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
       "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
       "Helvetica Neue", sans-serif;
+
+    @media (max-width: 750px) {
+      font-size: 25px;
+      margin-top: 20px;
+    }
   }
 
   .description {
     line-height: 28px;
     font-size: 18px;
     color: ${grey};
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    @media (max-width: 750px) {
+      font-size: 16px;
+    }
   }
 
   .text {
