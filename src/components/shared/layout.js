@@ -13,7 +13,7 @@ import { body, grey, white } from "./theme";
 // Components
 import Header from "./header";
 import { Code, ArticleHeader } from "../writings";
-import SEO from "./SEO";
+import SEO from "./seo";
 // helpers
 import me from "../../../config";
 
