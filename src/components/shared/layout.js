@@ -41,7 +41,7 @@ const Layout = ({ children, router: { route } }) => (
       {({ theme, footer }) => {
         if (route.length > 10) {
           const slug = route.replace("/writings/", "").replace("/");
-          const url = `https://morajabi.im/blog/${slug}`;
+          const url = `${me.url}${slug}`;
           const { title, desc = "", date } = writings[slug];
 
           return (

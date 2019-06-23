@@ -68,7 +68,9 @@ const RightSide = () => {
 
 const StyledRightSide = styled.div`
   color: ${white};
-
+  * {
+    outline: 1px solid red;
+  }
   @media (max-width: 750px) {
     margin-bottom: ${props => (props.footer ? "15rem" : "4rem")};
   }
