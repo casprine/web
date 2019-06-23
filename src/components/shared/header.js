@@ -198,6 +198,7 @@ const StyledBottomNav = styled.header`
   }
 
   .nav {
+    margin-top: 20px;
     display: grid;
   }
 

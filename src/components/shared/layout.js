@@ -12,7 +12,7 @@ import { body, grey, white } from "./theme";
 
 // Components
 import Header from "./header";
-import { Code, ArticleHeader } from "../writings";
+import { Code, ArticleHeader, Share } from "../writings";
 import SEO from "./seo";
 // helpers
 import me from "../../../config";
@@ -61,6 +61,7 @@ const Layout = ({ children, router: { route } }) => (
                     <StyledBlogPost>
                       <ArticleHeader title={title} date={date} />
                       {children}
+                      <Share title={title} url={url} />
                     </StyledBlogPost>
                   </MDXProvider>
                 </div>

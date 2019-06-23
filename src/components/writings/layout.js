@@ -60,7 +60,7 @@ const StyledBlogPost = styled.div`
 	margin: 0 auto;
 
 	@media (max-width: 750px) {
-		width: 95%;
+		width: 100%;
 		margin-top: 15px;
 		margin-bottom: 100px;
 	}
@@ -94,6 +94,7 @@ const StyledBlogPost = styled.div`
 			sans-serif;
 	}
 	* {
+		outline: 1px solid red !important;
 	}
 `;
 
