@@ -157,6 +157,7 @@ const StyledHeader = styled.div`
 
 const StyledBottomNav = styled.header`
   grid-template-columns: auto;
+  display: none;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -198,9 +199,6 @@ const StyledBottomNav = styled.header`
 
   .nav {
     display: grid;
-    transition-duration: 0.3s, 0.5s;
-    transition-timing-function: ease-in-out;
-    transition-property: top, opacity, box-shadow;
   }
 
   nav {

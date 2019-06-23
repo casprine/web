@@ -1,6 +1,7 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import Head from "next/head";
+import { MDXProvider } from "@mdx-js/react";
 import { withRouter } from "next/router";
 
 // Context
@@ -11,7 +12,14 @@ import { body, grey, white } from "./theme";
 
 // Components
 import Header from "./header";
-import { BlogPostLayout } from "../writings";
+import { Code, ArticleHeader } from "../writings";
+import SEO from "./SEO";
+// helpers
+import me from "../../../config";
+
+// Data
+import writings from "../../data/writings.json";
+
 const layoutStyles = {
   wrapper: {
     minHeight: "100vh",
@@ -23,7 +31,7 @@ const layoutStyles = {
   }
 };
 
-const Layout = withRouter(({ children, router }) => (
+const Layout = ({ children, router: { route } }) => (
   <Fragment>
     <Head>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -31,7 +39,11 @@ const Layout = withRouter(({ children, router }) => (
 
     <ContextConsumer>
       {({ theme, footer }) => {
-        if (router.route.length > 10) {
+        if (route.length > 10) {
+          const slug = route.replace("/writings/", "").replace("/");
+          const url = `https://morajabi.im/blog/${slug}`;
+          const { title, desc = "", date } = writings[slug];
+
           return (
             <ThemeProvider theme={{ mode: theme }}>
               <StyledLayout>
@@ -40,9 +52,17 @@ const Layout = withRouter(({ children, router }) => (
                   className={!footer ? "children" : "children overflow"}
                 >
                   <Header />
-                  <BlogPostLayout route={router.route}>
-                    {children}
-                  </BlogPostLayout>
+                  <MDXProvider
+                    components={{
+                      code: Code
+                    }}
+                  >
+                    <SEO title={title} url={url} />
+                    <StyledBlogPost>
+                      <ArticleHeader title={title} date={date} />
+                      {children}
+                    </StyledBlogPost>
+                  </MDXProvider>
                 </div>
               </StyledLayout>
             </ThemeProvider>
@@ -65,27 +85,71 @@ const Layout = withRouter(({ children, router }) => (
       }}
     </ContextConsumer>
   </Fragment>
-));
+);
+
+export default withRouter(Layout);
 
 const StyledLayout = styled.div`
   background: ${body};
   height: 100%;
   background: ${body};
 
+  .shit {
+    outline: 1px solid red;
+    * {
+      outline: 1px solid red;
+    }
+  }
   .children {
     width: 70vw;
 
     @media (max-width: 1307px) and (min-width: 749px) {
       padding: 0 1rem;
     }
-
-    @media (max-width: 1120px) {
-      width: 90vw;
-    }
     @media (max-width: 750px) {
-      width: 100vw;
+      width: 90%;
     }
   }
 `;
 
-export default Layout;
+const StyledBlogPost = styled.div`
+  width: 90%;
+  margin: 0 auto;
+
+  @media (max-width: 750px) {
+    width: 95%;
+    margin-top: 15px;
+    margin-bottom: 100px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+    font-weight: 100 !important;
+    color: ${white};
+  }
+
+  strong,
+  b {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+
+  p {
+    color: ${grey};
+    line-height: 28px;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+  * {
+  }
+`;

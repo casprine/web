@@ -7,14 +7,13 @@ import Head from "next/head";
 import { grey, white } from "../shared/theme";
 
 // components
-import ArticleHeading from "./articleHeading";
+// import ArticleHeading from "./articleHeading";
 import { SEO } from "../shared";
 import ShareIt from "./share";
 import Code from "./syntaxHighlighter";
 
 // helpers
 import me from "../../../config";
-import { sortedWritings } from "../../utils/helpers";
 
 // Data
 import writings from "../../data/writings.json";

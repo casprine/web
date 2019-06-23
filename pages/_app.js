@@ -8,7 +8,7 @@ import Router from "next/router";
 import { ContextProvider } from "../src/context/index.js";
 
 // GlobalStylyes
-import GlobalStyle from "./global.css";
+import GlobalStyle from "../src/components/shared/global.css";
 
 // LayoutRender
 import { SectionHeader, Layout } from "../src/components/shared/";

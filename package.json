@@ -5,7 +5,6 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.0.21",
     "@zeit/next-mdx": "^1.2.0",
-    "express": "^4.16.4",
     "next": "^8.1.0",
     "next-images": "^1.0.4",
     "nprogress": "^0.2.0",
@@ -13,14 +12,16 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.1",
+    "react-syntax-highlighter": "^9.0.1",
     "remark-emoji": "^2.0.2",
     "remark-images": "^0.15.6",
     "styled-components": "^4.1.3",
     "styled-theming": "^2.2.0"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "next dev",
     "build": "next build",
+    "export": "yarn build && next export",
     "prod": "NODE_ENV=production node server.js"
   },
   "eslintConfig": {
@@ -34,7 +35,6 @@
   ],
   "devDependencies": {
     "@mdx-js/loader": "^1.0.21",
-    "@mdx-js/tag": "^0.20.3",
-    "react-syntax-highlighter": "^9.0.1"
+    "@mdx-js/tag": "^0.20.3"
   }
 }

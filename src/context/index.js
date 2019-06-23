@@ -46,4 +46,4 @@ class Provider extends Component {
 
 const ContextConsumer = ContextContext.Consumer;
 const ContextProvider = withRouter(Provider);
-export { ContextConsumer, ContextProvider };
+export { ContextConsumer, ContextProvider, ContextConsumer as Context };
