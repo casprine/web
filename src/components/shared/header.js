@@ -26,9 +26,9 @@ const Header = () => {
                 </Link>
 
                 <div className="links">
-                  <Link href="/work" prefetch>
-                    <span>Work</span>
-                  </Link>
+                  {/* <Link href="/work" prefetch> */}
+                  {/*   <span>Work</span> */}
+                  {/* </Link> */}
                   <Link href="/writings" prefetch>
                     <span>Writings</span>
                   </Link>
@@ -52,11 +52,11 @@ const Header = () => {
                   <ThemeChanger />
                 </div>
                 <nav>
-                  <div className="link">
-                    <Link href="/work" prefetch>
-                      <span className="">Work</span>
-                    </Link>
-                  </div>
+                  {/* <div className="link"> */}
+                  {/*   <Link href="/work" prefetch> */}
+                  {/*     <span className="">Work</span> */}
+                  {/*   </Link> */}
+                  {/* </div> */}
 
                   <div className="link">
                     <Link href="/writings" prefetch>

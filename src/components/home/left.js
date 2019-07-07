@@ -23,14 +23,13 @@ const LeftSide = () => {
               <div className="wrapper">
                 <div className="heading">
                   Hi, I am Casprine, frontend developer and ui designer based in
-                  Ghana 🇬🇭 in love with React and CSS
+                  Ghana 🇬🇭 in love with React and CSS.
                 </div>
 
-                <div className="description mb">
-                  I design and develop experiences that make people's lives
-                  simple. <br /> Let me help you grow your business & make your
-                  product look pretty while I'm at it.
-                </div>
+                {/* <div className="description mb"> */}
+                {/*   I am a web and mobile developer <br /> Let me help you grow your business & make your */}
+                {/*   product look pretty while I'm at it. */}
+                {/* </div> */}
                 <div className="stacks mb">
                   <div className="text">I currently work with </div>
                   {stack.map((s, i) => (
@@ -72,14 +71,12 @@ const StyledLeftSide = styled.div`
 
   .description {
     line-height: 28px;
-    font-size: 18px;
     color: ${grey};
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-    @media (max-width: 750px) {
-      font-size: 16px;
-    }
+    outline: 1px solid red;
+    font-size: 16px;
+    font-family: "inter-regular", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
   }
 
   .text {

@@ -29,22 +29,22 @@ const RightSide = () => {
           <ThemeProvider theme={{ mode: theme }}>
             <StyledRightSide footer={footer}>
               <div className="wrapper mb">
-                <StyledProjects className="projects">
-                  <span>made</span>
-                  {projs.map((proj, i) => {
-                    return (
-                      <StyledLink href={proj.link} key={i} className="mlr">
-                        {proj.name}
-                      </StyledLink>
-                    );
-                  })}
-                  <span>
-                    and some other stuff{" "}
-                    <Link prefetch passHref href="/work">
-                      <StyledLink className="mlr">here</StyledLink>
-                    </Link>
-                  </span>
-                </StyledProjects>
+                {/* <StyledProjects className="projects"> */}
+                {/*   <span>made</span> */}
+                {/*   {projs.map((proj, i) => { */}
+                {/*     return ( */}
+                {/*       <StyledLink href={proj.link} key={i} className="mlr"> */}
+                {/*         {proj.name} */}
+                {/*       </StyledLink> */}
+                {/*     ); */}
+                {/*   })} */}
+                {/*   <span> */}
+                {/*     and some other stuff{" "} */}
+                {/*     <Link prefetch passHref href="/work"> */}
+                {/*       <StyledLink className="mlr">here</StyledLink> */}
+                {/*     </Link> */}
+                {/*   </span> */}
+                {/* </StyledProjects> */}
 
                 <div className="mb">
                   <StyledHeading>Writings</StyledHeading>
@@ -84,7 +84,7 @@ const StyledRightSide = styled.div`
 
   .read-more {
     text-transform: capitalize !important;
-    margin: 10px 0;
+    margin: 20px 0;
     color: ${projectCard};
   }
 `;
@@ -95,6 +95,7 @@ const StyledHeading = styled.div`
     sans-serif;
   color: ${white};
   font-size: 2rem;
+  letter-spacing: -0.05rem;
 `;
 
 const StyledProjects = styled.div`
@@ -118,7 +119,7 @@ const StyledBlogPost = styled.article`
 
 const StyledLink = styled.a`
   text-transform: lowercase;
-  color: ${grey};
+  color: ${projectCard};
   display: inline-block;
   color: inherit;
   border-bottom: 2px solid ${borders};

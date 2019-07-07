@@ -3,18 +3,24 @@ import styled from "styled-components";
 import Link from "next/link";
 
 // Theme
-import { grey, projectCard, borders, white } from "../shared/theme";
+import { grey, projectCard, borders, white, LinkBg } from "../shared/theme";
 
 const Article = ({ title, description, slug, date }) => {
-	console.log(date, "date");
 	return (
 		<Fragment>
 			<Link prefetch passHref href={`/writings/${slug}`}>
 				<StyledArticle>
-					<div className="data">{date}</div>
 					<div className="title">{title}</div>
-
-					<div className="tag">React</div>
+					<div className="description">
+						Debugging builds are harder than debugging your
+						application code because you can't really add debugger
+						or console.log in your code to find out what's
+						happening. It's a black box - config in, bundle out.
+					</div>
+					<div className="flex">
+						<div className="tag">React </div>
+						<div className="date">{date}</div>
+					</div>
 				</StyledArticle>
 			</Link>
 		</Fragment>
@@ -22,33 +28,65 @@ const Article = ({ title, description, slug, date }) => {
 };
 
 const StyledArticle = styled.a`
-	outline: 1px solid red;
-	display: flex;
-	align-items: center;
+	.flex {
+		display: flex;
+		align-items: flex-end;
+	}
 
 	.title {
-		font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
+		font-family: "ibm-plex", system-ui, -apple-system, BlinkMacSystemFont,
 			"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
 			"Helvetica Neue", sans-serif;
-		font-size: 20px;
-		border-bottom: 2px solid ${borders};
-		transition: all 0.25s;
-		letter-spacing: -0.04em;
+		font-size: 18px;
+		margin-top: 25px;
 		display: inline-block;
 		color: ${white};
+		position: relative;
+
+		&:after {
+			content: " ";
+			position: absolute;
+			top: 60%;
+			left: -0.1em;
+			right: -0.1em;
+			bottom: 0;
+			transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+			background-color: ${LinkBg};
+		}
+
 		&:hover {
-			border-bottom: 2px solid ${projectCard};
+			&:after {
+				top: 0%;
+			}
 		}
 	}
 
 	.description {
 		color: ${grey};
-		margin: 5px 0;
-		line-height: 28px;
+		margin: 8px 0;
+		line-height: 1.6;
 		font-size: 16px;
-		font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-			Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-			sans-serif;
+		font-family: "inter-regular", system-ui, -apple-system,
+			BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+			"Open Sans", "Helvetica Neue", sans-serif;
+	}
+
+	.date {
+		color: ${grey};
+		font-family: "ibm-plex", system-ui, -apple-system, BlinkMacSystemFont,
+			"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+			"Helvetica Neue", sans-serif;
+		font-size: 0.83333em;
+		margin-left: auto;
+	}
+
+	.tag {
+		color: ${grey};
+		font-family: "ibm-plex", system-ui, -apple-system, BlinkMacSystemFont,
+			"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+			"Helvetica Neue", sans-serif;
+		font-size: 0.9rem;
+		/*margin: 15 0 px;*/
 	}
 `;
 

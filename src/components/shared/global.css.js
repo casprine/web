@@ -1,7 +1,8 @@
 import { createGlobalStyle } from "styled-components";
+import { LinkBg } from "./theme";
 
 const GlobalStyles = createGlobalStyle`
-   
+
   @font-face {
      font-family: 'apercu';
      src: url('../static/fonts/Apercu-Regular.woff2') format("woff2");
@@ -18,11 +19,29 @@ const GlobalStyles = createGlobalStyle`
      font-style: normal;
      font-display: swap;
  }
+
+  @font-face {
+     font-family: 'inter-regular';
+     src: url('../static/fonts/Inter.woff2') format("woff2");
+     font-weight: normal;
+     font-style: normal;
+     font-display: swap;
+ }
  
+ @font-face {
+     font-family: 'work-sans';
+     src: url('../static/fonts/Work-Sans-Regular.woff2') format("woff2");
+     font-weight: normal;
+     font-style: normal;
+     font-display: swap;
+ }
+ 
+
+
  body {
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
-     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
+     font-family:"inter-regular", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
      scroll-behavior: smooth;
      font-feature-settings: "calt", "kern", "liga";
      margin: 0;
@@ -41,28 +60,6 @@ const GlobalStyles = createGlobalStyle`
      font-family: "ibm-plex", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
  }
 
- .link {
-     text-decoration: none;
-     position: relative;
- }
-
-
-.link:after {
-     content: "CASPRINE";
-     position: absolute;
-     z-index: -1;
-     top: 60%;
-     left: -0.1em;
-     right: -0.1em;
-     bottom: 0;
-     transition: top 200ms cubic-bezier(0, .8, .13, 1);
-     background-color: rgba(79,192,141,0.5);
-}
-
-.link:hover:after {
-     top: 0%;
-}
-
  .center {
      display: flex;
      i {
@@ -71,7 +68,7 @@ const GlobalStyles = createGlobalStyle`
  }
  
 a{
-     text-decoration: none;
+     text-decoration:none;
 }
 
  hr {
@@ -81,12 +78,7 @@ a{
      border: 0;
  }
  
- b, strong {
-     font-family: "ibm-plex", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
-     font-weight: 100;
-     letter-spacing: -0.04em;
- }
- 
+
  .pointer {
      cursor: pointer;
  }

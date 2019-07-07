@@ -26,7 +26,7 @@ export const borders = theme("mode", {
 });
 
 export const body = theme("mode", {
-  false: "#E7EEF8",
+  false: "#F7FAFC",
   true: "rgb(16, 23, 30)"
 });
 
@@ -38,4 +38,9 @@ export const footer = theme("mode", {
 export const footerText = theme("mode", {
   false: "#fff",
   true: ""
+});
+
+export const LinkBg = theme("mode", {
+  false: "rgba(43, 108, 176, 0.5)",
+  true: "rgba(56, 161, 105, 0.5)"
 });

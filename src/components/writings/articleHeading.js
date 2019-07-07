@@ -45,14 +45,11 @@ const StyledArticleHeading = styled.div`
 		font-family: "ibm-plex", system-ui, -apple-system, BlinkMacSystemFont,
 			"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
 			"Helvetica Neue", sans-serif;
-		margin-top: 3px;
 		color: ${grey};
-		border: 2px solid ${projectCard};
-		padding: 2px 8px;
 		display: inline-block;
-		border-radius: 3px;
 		font-size: 0.9rem;
 		letter-spacing: -0.04em;
+		margin-top: 5px;
 	}
 `;
 

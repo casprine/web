@@ -49,15 +49,20 @@ const StyledShareLink = styled.a`
   vertical-align: middle;
   text-decoration: none;
   font-size: 18px;
-
   color: white;
   border-radius: 4px;
   background: ${projectCard};
   font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
+  color: white !important;
+
   &:active {
     background: #e5e5e8;
+  }
+
+  &:after {
+    content: none !important;
   }
 `;
 
@@ -87,7 +92,6 @@ const StyledShareIt = styled.div`
       "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
       "Helvetica Neue", sans-serif;
     text-align: center;
-
     @media (max-width: 750px) {
       font-size: 1rem;
     }

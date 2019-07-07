@@ -8,7 +8,7 @@ import { withRouter } from "next/router";
 import { ContextConsumer } from "../../context/index";
 
 // Theme
-import { body, grey, white } from "./theme";
+import { body, grey, white, LinkBg } from "./theme";
 
 // Components
 import Header from "./header";
@@ -132,19 +132,45 @@ const StyledBlogPost = styled.div`
 
   strong,
   b {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
+    font-family: "ibm-plex", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif !important;
+    font-weight: 500;
+    letter-spacing: -0.06rem;
+    line-height: 25.6px;
+    font-size: 1rem;
   }
 
   p {
+    font-weight: 400;
+    line-height: 27px !important;
     color: ${grey};
     line-height: 28px;
-    font-size: 16px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
+    font-size: 1rem;
+    font-family: "inter-regular", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
   }
-  * {
+
+  a {
+    position: relative;
+    color: ${white};
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 60%;
+      left: -0.1em;
+      right: -0.1em;
+      bottom: 0;
+      transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+      background-color: ${LinkBg};
+    }
+
+    &:hover {
+      &:after {
+        top: 0%;
+      }
+    }
   }
 `;

@@ -11,7 +11,7 @@ const CodeBlockJS = props => {
 				fontSize: 14,
 				background: "#0f111a",
 				fontFamily: "ibm-plex",
-				borderRadius: "4px"
+				borderRadius: "2px"
 			}}
 			codeTagProps={{
 				fontSize: 14
