@@ -48,8 +48,7 @@ const InlineCode = styled.code`
 	padding-right: 1px;
 	display: inline-block;
 	line-height: 1.45;
-	font-family: "Monaco", monospace;
-
+	font-family: "ibm-plex", monospace;
 	color: #444;
 	border-radius: 2px;
 	background: #f4f4f6;
@@ -58,6 +57,10 @@ const InlineCode = styled.code`
 const StyledBlogPost = styled.div`
 	width: 90%;
 	margin: 0 auto;
+
+	* {
+		outline: 1px solid red;
+	}
 
 	@media (max-width: 750px) {
 		width: 100%;
@@ -80,9 +83,11 @@ const StyledBlogPost = styled.div`
 
 	strong,
 	b {
-		font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-			Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-			sans-serif;
+		font-family: "ibm-plex", system-ui, -apple-system, BlinkMacSystemFont,
+			"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+			"Helvetica Neue", sans-serif;
+		font-weight: 200 !important;
+		outline: 1px solid red !important;
 	}
 
 	p {

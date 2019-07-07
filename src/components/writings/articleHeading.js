@@ -27,9 +27,10 @@ const StyledArticleHeading = styled.div`
 	font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
 		"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
 		"Helvetica Neue", sans-serif;
+
 	.title {
 		font-size: 40px;
-		letter-spacing: 0.2px;
+		letter-spacing: -0.04em;
 		font-weight: 500;
 		margin: 0;
 		font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
@@ -39,15 +40,19 @@ const StyledArticleHeading = styled.div`
 			font-size: 26px;
 		}
 	}
+
 	.date {
+		font-family: "ibm-plex", system-ui, -apple-system, BlinkMacSystemFont,
+			"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+			"Helvetica Neue", sans-serif;
 		margin-top: 3px;
 		color: ${grey};
-		/*font-family: "apercu";*/
 		border: 2px solid ${projectCard};
 		padding: 2px 8px;
 		display: inline-block;
 		border-radius: 3px;
 		font-size: 0.9rem;
+		letter-spacing: -0.04em;
 	}
 `;
 

@@ -5,18 +5,16 @@ import Link from "next/link";
 // Theme
 import { grey, projectCard, borders, white } from "../shared/theme";
 
-const Article = ({ title, description, slug }) => {
+const Article = ({ title, description, slug, date }) => {
+	console.log(date, "date");
 	return (
 		<Fragment>
 			<Link prefetch passHref href={`/writings/${slug}`}>
 				<StyledArticle>
+					<div className="data">{date}</div>
 					<div className="title">{title}</div>
-					<div className="description">
-						Debugging builds are harder than debugging your
-						application code because you can't really add debugger
-						or console.log in your code to find out what's
-						happening. It's a black box - config in, bundle out.
-					</div>
+
+					<div className="tag">React</div>
 				</StyledArticle>
 			</Link>
 		</Fragment>
@@ -24,14 +22,18 @@ const Article = ({ title, description, slug }) => {
 };
 
 const StyledArticle = styled.a`
+	outline: 1px solid red;
+	display: flex;
+	align-items: center;
+
 	.title {
 		font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
 			"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
 			"Helvetica Neue", sans-serif;
 		font-size: 20px;
-		margin-top: 25px;
 		border-bottom: 2px solid ${borders};
 		transition: all 0.25s;
+		letter-spacing: -0.04em;
 		display: inline-block;
 		color: ${white};
 		&:hover {

@@ -10,7 +10,11 @@ const StyledHome = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  outline: 1px solid red;
 
+  * {
+    outline: 1px solid red;
+  }
   .wrapper {
     margin: 0 auto;
   }

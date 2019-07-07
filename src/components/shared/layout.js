@@ -95,14 +95,8 @@ const StyledLayout = styled.div`
   height: 100%;
   background: ${body};
 
-  .shit {
-    outline: 1px solid red;
-    * {
-      outline: 1px solid red;
-    }
-  }
   .children {
-    width: 70vw;
+    width: 80vw;
 
     @media (max-width: 1307px) and (min-width: 749px) {
       padding: 0 1rem;

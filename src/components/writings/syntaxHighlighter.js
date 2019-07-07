@@ -10,7 +10,7 @@ const CodeBlockJS = props => {
 			customStyle={{
 				fontSize: 14,
 				background: "#0f111a",
-				fontFamily: "Monaco",
+				fontFamily: "ibm-plex",
 				borderRadius: "4px"
 			}}
 			codeTagProps={{

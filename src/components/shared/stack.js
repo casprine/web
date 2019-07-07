@@ -7,7 +7,7 @@ import { projectCard, white } from "./theme";
 const Stack = ({ name }) => <StyledStack>{name}</StyledStack>;
 
 const StyledStack = styled.div`
-  font-family: "apercu", system-ui, -apple-system, BlinkMacSystemFont,
+  font-family: "ibm-plex", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   margin-right: 10px;
@@ -19,6 +19,7 @@ const StyledStack = styled.div`
   border-radius: 2px;
   color: ${white};
   text-transform: lowercase;
+  letter-spacing: -0.04em;
 
   &:first-child {
     margin-left: 0;
