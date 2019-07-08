@@ -22,7 +22,7 @@ class MyApp extends App {
           <html lang="en" />
         </Head>
         <ContextProvider value="dark">
-          <GlobalStyle />y
+          <GlobalStyle />
           <Fragment>
             <Layout>
               <Component {...pageProps} />
