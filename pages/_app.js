@@ -20,8 +20,8 @@ class MyApp extends App {
       <Container>
         <Head>
           <html lang="en" />
+          <GlobalStyle />
         </Head>
-        <GlobalStyle />
         <ContextProvider value="dark">
           <Layout>
             <Component {...pageProps} />

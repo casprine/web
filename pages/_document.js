@@ -18,7 +18,6 @@ export default class MyDocument extends Document {
         ...initialProps,
         styles: (
           <>
-            <GlobalStyle />
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>
