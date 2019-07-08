@@ -8,8 +8,6 @@ const CodeBlockJS = props => {
 	const classNames = props.className.split(" ");
 	const lang = classNames[0].substring(9);
 	const fileName = props.metastring;
-
-	console.log(fileName, classNames, lang);
 	return (
 		<Fragment>
 			<div className="outline-all">

@@ -51,7 +51,7 @@ const GlobalStyles = createGlobalStyle`
 
 
 .outline-all {
-     width: 85vw;
+     width: 80vw;
      margin-left: 50%;
      transform: translateX(-50%);
 }

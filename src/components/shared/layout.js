@@ -14,8 +14,10 @@ import { body, grey, white, LinkBg } from "./theme";
 import Header from "./header";
 import { Code, ArticleHeader, Share } from "../writings";
 import SEO from "./seo";
+
 // helpers
 import me from "../../../config";
+import GlobalStyle from "./global.css";
 
 // Data
 import writings from "../../data/writings.json";
@@ -35,6 +37,7 @@ const Layout = ({ children, router: { route } }) => (
   <Fragment>
     <Head>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <GlobalStyle />
     </Head>
 
     <ContextConsumer>

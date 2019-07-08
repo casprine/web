@@ -7,9 +7,6 @@ import Router from "next/router";
 // ContextProvider
 import { ContextProvider } from "../src/context/index.js";
 
-// GlobalStylyes;
-// import GlobalStyle from "../src/components/shared/global.css";
-
 // LayoutRender
 import { SectionHeader, Layout } from "../src/components/shared/";
 
@@ -23,7 +20,6 @@ class MyApp extends App {
         </Head>
         <ContextProvider value="dark">
           <Fragment>
-            {/* <GlobalStyle /> */}
             <Layout>
               <Component {...pageProps} />
             </Layout>
