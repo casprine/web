@@ -50,6 +50,11 @@ const GlobalStyles = createGlobalStyle`
  }
 
 
+.outline-all {
+     width: 85vw;
+     margin-left: 50%;
+     transform: translateX(-50%);
+}
  
  #__next {
      height: inherit;
@@ -58,6 +63,10 @@ const GlobalStyles = createGlobalStyle`
  pre,
  code {
      font-family: "ibm-plex", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
+ }
+
+ pre {
+     margin: 0 0 3rem 0 !important;
  }
 
  .center {

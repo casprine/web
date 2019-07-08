@@ -9,7 +9,7 @@ export function day() {
 	const now = new Date();
 	const hour = now.getHours();
 
-	if (hour > 0 && hour < 18) {
+	if (hour > 4 && hour < 18) {
 		return true;
 	}
 	return false;

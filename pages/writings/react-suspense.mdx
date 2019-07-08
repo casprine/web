@@ -34,7 +34,7 @@ A specialized tool works better than a generic one when it can impose and benefi
 
 **These principles happen to be true for most UIs.** However, React is ill-suited when there are no stable “patterns” in the output. For example, React may help you write a Twitter client but won’t be very useful for a [3D pipes screensaver](https://www.youtube.com/watch?v=Uzx9ArZ7MUU).
 
-```js
+```jsx App.js
 class Button extends React.Component {
 	state = {
 		color: this.props.color
@@ -74,7 +74,7 @@ class Button extends React.Component {
 </div>
 ```
 
-```css
+```css index.min.css
 .sm\:focus\:font-semibold:focus {
 	font-weight: 600;
 }
@@ -89,4 +89,61 @@ class Button extends React.Component {
 }
 .sm\:h-0 {
 	height: 0;
+```
+
+```go main.go
+package main
+
+import "fmt"
+
+func main() {
+  message := greetMe("world")
+  fmt.Println(message)
+}
+
+func greetMe(name string) string {
+  return "Hello, " + name + "!"
+}
+
+```
+
+```php index.php
+
+<?php
+function greetMe($name) {
+  return "Hello, " . $name . "!";
+}
+
+$message = greetMe($name);
+echo $message;
+
+```
+
+```rb rails.rb
+class ApplicationController
+  helper_method :logged_in?
+
+  def logged_in?
+    "Something"
+  end
+end
+
+```
+
+```c main.c
+#ifdef DEBUG
+  console.log('hi');
+#elif defined VERBOSE
+  ...
+#else
+  ...
+#endif
+```
+
+```csharp index.csharp
+public void PrintCoordinates(Point p)
+{
+    p.GetCoordinates(out int x, out int y);
+    WriteLine($"({x}, {y})");
+}
 ```
