@@ -8,10 +8,11 @@ import writings from "../data/writings.json";
 export function day() {
 	const now = new Date();
 	const hour = now.getHours();
-	if (hour > 4 && hour < 18) {
-		return "true";
+
+	if (hour > 0 && hour < 18) {
+		return true;
 	}
-	return "false";
+	return false;
 }
 
 export function formatPostDate(date, lang = "en-US") {
@@ -36,4 +37,3 @@ export function sortedWritings() {
 
 	return sortedWritings;
 }
-
