@@ -36,8 +36,6 @@ const GlobalStyles = createGlobalStyle`
      font-display: swap;
  }
  
-
-
  body {
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
