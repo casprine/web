@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, injectGlobal } from "styled-components";
 import { LinkBg } from "./theme";
 
 const GlobalStyles = createGlobalStyle`

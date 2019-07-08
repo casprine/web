@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Head from "next/head";
 import App, { Container } from "next/app";
 import NProgress from "nprogress";
@@ -7,8 +7,8 @@ import Router from "next/router";
 // ContextProvider
 import { ContextProvider } from "../src/context/index.js";
 
-// GlobalStylyes
-import GlobalStyle from "../src/components/shared/global.css";
+// GlobalStylyes;
+// import GlobalStyle from "../src/components/shared/global.css";
 
 // LayoutRender
 import { SectionHeader, Layout } from "../src/components/shared/";
@@ -20,12 +20,14 @@ class MyApp extends App {
       <Container>
         <Head>
           <html lang="en" />
-          <GlobalStyle />
         </Head>
         <ContextProvider value="dark">
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
+          <Fragment>
+            {/* <GlobalStyle /> */}
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </Fragment>
         </ContextProvider>
       </Container>
     );
