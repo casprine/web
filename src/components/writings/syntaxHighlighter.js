@@ -1,8 +1,13 @@
 import React, { Fragment } from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import SyntaxHighlighter from "react-syntax-highlighter/prism";
-import { tomorrow } from "react-syntax-highlighter/styles/prism";
-import { projectCard } from "../shared/theme";
+import { prism, tomorrow } from "react-syntax-highlighter/styles/prism";
+
+// theme
+import { projectCard, footer } from "../shared/theme";
+
+// context
+import { ContextConsumer } from "../../context/index";
 
 const CodeBlockJS = props => {
 	const classNames = props.className.split(" ");
@@ -10,28 +15,52 @@ const CodeBlockJS = props => {
 	const fileName = props.metastring;
 	return (
 		<Fragment>
-			<div className="outline-all">
-				{fileName ? <StyledFileName>{fileName}</StyledFileName> : null}
-				<SyntaxHighlighter
-					language={lang}
-					customStyle={{
-						fontSize: 14,
-						background: "#0f111a",
-						fontFamily: "ibm-plex",
-						borderBottomLeftRadius: "3px",
-						borderBottomRightRadius: "3px"
-					}}
-					codeTagProps={{
-						fontSize: 14
-					}}
-					style={tomorrow}
-				>
-					{props.children}
-				</SyntaxHighlighter>
-			</div>
+			<ContextConsumer>
+				{({ theme, footer }) => {
+					console.log(theme);
+					return (
+						<StyledCodeBlocks className="code-block">
+							{fileName ? (
+								<StyledFileName>{fileName}</StyledFileName>
+							) : null}
+							<SyntaxHighlighter
+								language={lang}
+								customStyle={{
+									fontSize: 14,
+									fontFamily: "ibm-plex",
+									borderBottomLeftRadius: "3px",
+									borderBottomRightRadius: "3px"
+								}}
+								codeTagProps={{
+									fontSize: 14
+								}}
+								style={theme ? prism : tomorrow}
+							>
+								{props.children}
+							</SyntaxHighlighter>
+						</StyledCodeBlocks>
+					);
+				}}
+			</ContextConsumer>
 		</Fragment>
 	);
 };
+
+const StyledCodeBlocks = styled.div`
+	width: 80vw;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	@media (max-width: 500px) {
+		width: 95vw;
+	}
+
+	pre {
+		background: ${footer} !important;
+		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+			0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+		font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh" !important;
+	}
+`;
 
 const StyledFileName = styled.figure`
 	color: white;

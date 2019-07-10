@@ -26,6 +26,8 @@ class Provider extends Component {
   render() {
     const { dark, footer } = this.state;
     const router = this.props.router;
+
+    console.log(dark, "dark");
     return (
       <Fragment>
         <ContextContext.Provider

@@ -1,8 +1,7 @@
-import { createGlobalStyle, injectGlobal } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import { LinkBg } from "./theme";
 
 const GlobalStyles = createGlobalStyle`
-
   @font-face {
      font-family: 'apercu';
      src: url('../static/fonts/Apercu-Regular.woff2') format("woff2");
@@ -48,11 +47,6 @@ const GlobalStyles = createGlobalStyle`
  }
 
 
-.outline-all {
-     width: 80vw;
-     margin-left: 50%;
-     transform: translateX(-50%);
-}
  
  #__next {
      height: inherit;
